@@ -1,0 +1,207 @@
+/*  Class:          LinkedList
+    Author:         Ryan Wood
+    Created On:     February 11, 2018
+    Last Modified:  April 14, 2018
+    Purpose:        demonstrate use of Linked List structure
+*/
+/*Linked List implementation file*/
+
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+template<typename type, size_t CAPACITY>
+LinkedList<type, CAPACITY>::LinkedList()
+{
+    head = NULL;
+}
+
+template<typename type, size_t CAPACITY>
+void LinkedList<type, CAPACITY>::clear(node data)
+{
+    if(NULL == data)
+        return;
+
+    clear(data->nodeLink);
+    delete(data);
+}
+
+template<typename type, size_t CAPACITY>
+LinkedList<type, CAPACITY>::~LinkedList()
+{
+    clear(head);
+}
+
+
+template<typename type, size_t CAPACITY>
+size_t LinkedList<type, CAPACITY>::size() const
+{
+    int  total       = 0;
+    node nodePointer = NULL;
+
+    if(NULL == head)
+        return 0;
+
+    nodePointer = head->nodeLink;
+
+    while(NULL != nodePointer)
+    {
+        total++;
+        nodePointer = nodePointer->nodeLink;
+    }
+
+    return total;
+}
+
+template<typename type, size_t CAPACITY>
+bool LinkedList<type, CAPACITY>::isFull() const
+{
+    return (size() == CAPACITY);
+}
+
+template<typename type, size_t CAPACITY>
+void LinkedList<type, CAPACITY>::insert(node data)
+{
+    node newNode  = NULL;
+    node nodePtr  = NULL;
+    node prevNode = NULL;
+
+    if(NULL == head)
+    {
+        head           = new type;
+        head->nodeLink = NULL;
+    }
+
+    //get the first element
+    nodePtr = head->nodeLink;
+
+    while(NULL != nodePtr && nodePtr > data)
+    {
+        prevNode = nodePtr;
+        nodePtr  = nodePtr->nodeLink;
+    }
+
+    if(data == nodePtr)
+        return;
+
+    newNode           = data;
+    newNode->nodeLink = nodePtr;
+
+    if(NULL == prevNode)
+        head->nodeLink = newNode;
+    else
+        prevNode->nodeLink = newNode;
+}
+
+template<typename type, size_t CAPACITY>
+std::ofstream& LinkedList<type, CAPACITY>::print(std::ofstream& out) const
+{
+    node nodePtr  = NULL;
+
+    if(NULL == head)
+        return out;
+
+    nodePtr  = head->nodeLink;
+    while(NULL != nodePtr)
+    {
+        out << *nodePtr << endl;
+        nodePtr = nodePtr->nodeLink;
+    }
+    return out;
+}
+
+template<typename type, size_t CAPACITY>
+std::ostream& LinkedList<type, CAPACITY>::print(std::ostream& out) const
+{
+    node nodePtr  = NULL;
+
+    if(NULL == head)
+        return out;
+
+    nodePtr  = head->nodeLink;
+    while(NULL != nodePtr)
+    {
+        out << *nodePtr << endl;
+        nodePtr = nodePtr->nodeLink;
+    }
+    return out;
+}
+
+template<typename type, size_t CAPACITY>
+void LinkedList<type, CAPACITY>::print() const
+{
+    node nodePtr = NULL;
+
+    if(NULL == head)
+        return;
+
+    nodePtr = head->nodeLink;
+    while(NULL != nodePtr)
+    {
+        cout << *nodePtr << endl;
+        nodePtr = nodePtr->nodeLink;
+    }
+}
+
+template<typename type, size_t CAPACITY>
+void LinkedList<type, CAPACITY>::remove(node data)
+{
+    node nodePtr   = NULL;
+    node prev      = NULL;
+
+    if(NULL == data)
+        return;
+
+    if(NULL == head)
+        return;
+    
+    nodePtr = head;
+    while(NULL != nodePtr && !(nodePtr == data))
+    {
+        prev    = nodePtr;
+        nodePtr = nodePtr->nodeLink;
+    }
+
+    if(NULL == prev)
+        head->nodeLink = nodePtr->nodeLink;
+    else
+        prev->nodeLink = nodePtr->nodeLink;
+
+    delete(nodePtr);
+}
+
+template<typename type, size_t CAPACITY>
+type* LinkedList<type, CAPACITY>::find(string key) const
+{
+    node item = NULL;
+
+    item = head;
+
+    while(NULL != item && (item->key != key))
+    {
+        item = item->nodeLink;
+    }
+
+    return item;
+}
+
+template<typename type, size_t CAPACITY>
+bool LinkedList<type, CAPACITY>::isEmpty() const
+{
+    return (NULL == head);
+}
+
+template<typename type, size_t CAPACITY>
+std::ostream &operator <<(std::ostream &out, const LinkedList<type, CAPACITY> &list)
+{
+    return list.print(out);
+}
+
+template<typename type, size_t CAPACITY>
+std::ofstream &operator <<(std::ofstream &out, const LinkedList<type, CAPACITY> &list)
+{
+    return list.print(out);
+}

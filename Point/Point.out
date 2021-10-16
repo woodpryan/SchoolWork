@@ -1,0 +1,60 @@
+(2.0, 2.0)
+(2.0, 5.0)
+(4.0, 5.0)
+(4.0, 2.0)
+
+Translated by x = 2, y = 1
+(4.0, 3.0)
+(4.0, 6.0)
+(6.0, 6.0)
+(6.0, 3.0)
+
+Scaled by x = 2 and y = 0.5
+(8.0, 1.5)
+(8.0, 3.0)
+(12., 3.0)
+(12., 1.5)
+
+Original box rotated 30 degrees
+(0.73, -0.73)
+(-0.77, -3.3)
+(0.96, -2.3)
+(2.5, 0.27)
+
+Box rotated another 60 degrees
+(1.0, 1.0)
+(2.5, 1.0)
+(2.5, 2.0)
+(1.0, 2.0)
+
+Box sheared by x = 1.5
+(2.5, 1.0)
+(4.0, 1.0)
+(4.0, 2.0)
+(2.5, 2.0)
+
+Box sheared by y = 1.7
+(2.5, 2.7)
+(4.0, 2.7)
+(4.0, 3.7)
+(2.5, 3.7)
+
+Ryan's point = (1.0, 2.5)
+Joe's Point = (-3.0, -7.3)
+Ryan's Point shifted by (x = -1, y = 2) = (-1.0, 4.5)
+Ryan and Joe's Points added = 
+(-1.0, 4.5) + (-3.0, -7.3) = (-4.0, -2.8)
+
+Ryan's point rotated 90 degrees = (4.5, 1.0)
+
+Ryan's point rotated another 90 degrees = (1.0, -4.5)
+
+Joe's Point = (-3.0, -7.3) and Ryan's Point = (1.0, -4.5)
+The midpoint between these points is (-1.0, -5.9)
+The distance between Ryan and Joes Points is 4.9
+
+newPoint and otherPoint are equal
+newPoint is less than or equal to otherPoint
+otherPoint shifted by 1
+newPoint is now not equal to otherPoint
+otherPoint is greater than or equal to newPoint

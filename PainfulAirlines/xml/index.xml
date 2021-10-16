@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.20" xml:lang="en-US">
+  <compound refid="class_customer" kind="class"><name>Customer</name>
+    <member refid="class_customer_1a84afa2daa17987c4f5b30dc93cbefb88" kind="variable"><name>m_customerType</name></member>
+    <member refid="class_customer_1aae2033c1f1321658284bc2457ca1f6fb" kind="variable"><name>m_isBeingHelped</name></member>
+    <member refid="class_customer_1a4e0b2bd951365595c9ea5c05cb5ad422" kind="variable"><name>m_isCaredFor</name></member>
+    <member refid="class_customer_1a4a0c72170242adfc521e4b5e4fe88082" kind="variable"><name>m_timeWaited</name></member>
+    <member refid="class_customer_1a0f423844fad764e70c87371d671822f8" kind="variable"><name>m_timeCreated</name></member>
+    <member refid="class_customer_1abcc8fae9701e5ba9d7d6fe44498b34e3" kind="function"><name>Customer</name></member>
+    <member refid="class_customer_1afd02b93fc9405e6f2c15bfe57accdbe6" kind="function"><name>Customer</name></member>
+    <member refid="class_customer_1a609bb254af86d494b1561bd5eefb6b0e" kind="function"><name>Customer</name></member>
+    <member refid="class_customer_1ab93fb14683b0393b9c900109f77c2629" kind="function"><name>~Customer</name></member>
+    <member refid="class_customer_1ad1e6465442afae07e83c72d8eaa6173e" kind="function"><name>getTimeWaited</name></member>
+    <member refid="class_customer_1a653782f129a0ce2c8326801ccdbc6534" kind="function"><name>getTimeCreated</name></member>
+    <member refid="class_customer_1ae350cb0e2a6c36cc0469a75419feb66b" kind="function"><name>isCaredFor</name></member>
+    <member refid="class_customer_1a38ff7e3c2caa7724e9bba7079226e349" kind="function"><name>isBeingHelped</name></member>
+    <member refid="class_customer_1a436d61856f38f528d82246edf9cad72f" kind="function"><name>startHelping</name></member>
+    <member refid="class_customer_1a3577b11c02bacc0a8e8888a72600fd31" kind="function"><name>processCustomer</name></member>
+    <member refid="class_customer_1a0117bd05a1912bba1b121eb5ae3ea80f" kind="function"><name>getCustomerType</name></member>
+    <member refid="class_customer_1af06102b9eb18e6571e14f178e9d89f9e" kind="function"><name>operator=</name></member>
+  </compound>
+  <compound refid="class_customer_service_rep" kind="class"><name>CustomerServiceRep</name>
+    <member refid="class_customer_service_rep_1a762e870c4e0e2739ff62caaf6680c52d" kind="variable"><name>m_customer</name></member>
+    <member refid="class_customer_service_rep_1a05c571f1422854448115eed55889ca0c" kind="variable"><name>m_helpStart</name></member>
+    <member refid="class_customer_service_rep_1a6327e35e1ffd662d8762ebe571c9dd63" kind="variable"><name>m_isHelping</name></member>
+    <member refid="class_customer_service_rep_1ac86a6f3ef279819197ae19389c444f27" kind="function"><name>CustomerServiceRep</name></member>
+    <member refid="class_customer_service_rep_1a2d6cd4f39d6bc428e7090e4a35f3338c" kind="function"><name>CustomerServiceRep</name></member>
+    <member refid="class_customer_service_rep_1ad1b7d1f5c44d5073c500d7fa2fd16876" kind="function"><name>CustomerServiceRep</name></member>
+    <member refid="class_customer_service_rep_1ac88a86d81594b949536c4daddb15d31b" kind="function"><name>~CustomerServiceRep</name></member>
+    <member refid="class_customer_service_rep_1ad05ca3dacc5a08c6edcb0884af4cf11e" kind="function"><name>isBusy</name></member>
+    <member refid="class_customer_service_rep_1ab2c02bd7abaaf3768286a24f864389dd" kind="function"><name>getTimeSpentOnCustomer</name></member>
+    <member refid="class_customer_service_rep_1a3c5a0f037f9a1a3d1ffea5a29ebe3ba4" kind="function"><name>startHelping</name></member>
+    <member refid="class_customer_service_rep_1aa786a61ac4e8b6920ff0ab0b9c82e9f4" kind="function"><name>finishCustomer</name></member>
+    <member refid="class_customer_service_rep_1a09665d1e25d7853964295e91c35a7743" kind="function"><name>getCustomer</name></member>
+    <member refid="class_customer_service_rep_1a4359ba4a6dba367709ca27a7077705a9" kind="function"><name>getHelpStart</name></member>
+  </compound>
+  <compound refid="class_simulation_manager" kind="class"><name>SimulationManager</name>
+    <member refid="class_simulation_manager_1abfbe0847bac2c3232cbfa0f8e3696e8c" kind="variable"><name>ECON_GEN_RATE</name></member>
+    <member refid="class_simulation_manager_1ad7f7b06d713299bba9a93df61dc79dca" kind="variable"><name>BUS_GEN_RATE</name></member>
+    <member refid="class_simulation_manager_1a4cbb1c29fc3f0a61fbef080a9f192355" kind="variable"><name>FIRST_CLASS_GEN_RATE</name></member>
+    <member refid="class_simulation_manager_1a05a0f269781bb6ab2c1b416999a2a667" kind="variable"><name>econAssistRate</name></member>
+    <member refid="class_simulation_manager_1a89de62b59589e723ff7ecd49d109d477" kind="variable"><name>busAssistRate</name></member>
+    <member refid="class_simulation_manager_1a0e56190ee75ed2878ca15a0e4b878409" kind="variable"><name>firstClassAssistRate</name></member>
+    <member refid="class_simulation_manager_1ab29f72dfb5aa659639b0102887552676" kind="variable"><name>m_customerServiceReps</name></member>
+    <member refid="class_simulation_manager_1a3a30b68857b47b673db4fc5946839011" kind="variable"><name>m_helpedCustomers</name></member>
+    <member refid="class_simulation_manager_1a0056c4c423072582e66be0f44eea3b18" kind="variable"><name>m_lines</name></member>
+    <member refid="class_simulation_manager_1af1b48e0abf77b4f1738f6257498562ad" kind="variable"><name>m_timeTarget</name></member>
+    <member refid="class_simulation_manager_1a7676f5a7f0f466898973ae90500a8836" kind="variable"><name>m_time</name></member>
+    <member refid="class_simulation_manager_1a3275ef7540abb64951d7e6bc3a064190" kind="variable"><name>m_maxLineLengths</name></member>
+    <member refid="class_simulation_manager_1ae7d8f5d20c274db5166cc6116b646f55" kind="variable"><name>m_lineLengthTotals</name></member>
+    <member refid="class_simulation_manager_1a5ff3bcee43f2da414a6fa9df17b7572f" kind="function"><name>updateHelpStatus</name></member>
+    <member refid="class_simulation_manager_1afb96f0e6737629ff0f4b422f12499117" kind="function"><name>inRange</name></member>
+    <member refid="class_simulation_manager_1a5a45ca89e85997322aa9995472dc4c37" kind="function"><name>getAssistRange</name></member>
+    <member refid="class_simulation_manager_1acba2b3e6ce16c7f6e9fef8c83e6d904a" kind="function"><name>enqueueCustomer</name></member>
+    <member refid="class_simulation_manager_1a6d8400ce8c97269c22c9382a3f0e643d" kind="function"><name>helpCustomers</name></member>
+    <member refid="class_simulation_manager_1aaa7c7d399035c7adf3163363270523d6" kind="function"><name>toString</name></member>
+    <member refid="class_simulation_manager_1a1d6934595cc3a115f8b602c020277d0e" kind="function"><name>printLine</name></member>
+    <member refid="class_simulation_manager_1ae884c8b7c710890f03611a213c6890e4" kind="function"><name>SimulationManager</name></member>
+    <member refid="class_simulation_manager_1a7e7d91e87e35cb25fb13f5e439257488" kind="function"><name>~SimulationManager</name></member>
+    <member refid="class_simulation_manager_1a687803bfcadb7172273bee083b423ac9" kind="function"><name>timeTick</name></member>
+    <member refid="class_simulation_manager_1acec1cda126401b604e30cd050bae6d21" kind="function"><name>printLines</name></member>
+  </compound>
+  <compound refid="struct_time_range" kind="struct"><name>TimeRange</name>
+    <member refid="struct_time_range_1a832fc775ec7b887af8e4bc9d2e18d5c0" kind="variable"><name>min</name></member>
+    <member refid="struct_time_range_1ad29d17e5849b42d6054634e502387c7b" kind="variable"><name>max</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="_customer_8cpp" kind="file"><name>Customer.cpp</name>
+  </compound>
+  <compound refid="_customer_8h" kind="file"><name>Customer.h</name>
+    <member refid="_customer_8h_1aa2bfab1f4137c61d44f0e3f8fa56c6ce" kind="enum"><name>CustomerType</name></member>
+    <member refid="_customer_8h_1aa2bfab1f4137c61d44f0e3f8fa56c6cea51f6343df49531967b18ff7a91db360f" kind="enumvalue"><name>ECONOMY</name></member>
+    <member refid="_customer_8h_1aa2bfab1f4137c61d44f0e3f8fa56c6cea4ee5d55b3f0765684c0ee4afa27cb47a" kind="enumvalue"><name>BUSINESS</name></member>
+    <member refid="_customer_8h_1aa2bfab1f4137c61d44f0e3f8fa56c6ceaf2c5f536443ed81c6722ca4e921d73f0" kind="enumvalue"><name>FIRST_CLASS</name></member>
+  </compound>
+  <compound refid="_customer_service_rep_8cpp" kind="file"><name>CustomerServiceRep.cpp</name>
+  </compound>
+  <compound refid="_customer_service_rep_8h" kind="file"><name>CustomerServiceRep.h</name>
+  </compound>
+  <compound refid="_main_8cpp" kind="file"><name>Main.cpp</name>
+    <member refid="_main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_simulation_manager_8cpp" kind="file"><name>SimulationManager.cpp</name>
+    <member refid="_simulation_manager_8cpp_1ad93c327ea544cb79be050558749c9dc6" kind="function"><name>outFile</name></member>
+    <member refid="_simulation_manager_8cpp_1a1d49e8dd8a6b7a656e7f1c5d2d8d76a5" kind="function"><name>getRandomInt</name></member>
+    <member refid="_simulation_manager_8cpp_1af082905f7eac6d03e92015146bbc1925" kind="function"><name>max</name></member>
+  </compound>
+  <compound refid="_simulation_manager_8h" kind="file"><name>SimulationManager.h</name>
+    <member refid="_simulation_manager_8h_1a421233b5a18ae3d203fcd776e38ef728" kind="typedef"><name>line</name></member>
+  </compound>
+</doxygenindex>

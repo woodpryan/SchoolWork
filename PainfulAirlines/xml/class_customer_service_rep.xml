@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.20" xml:lang="en-US">
+  <compounddef id="class_customer_service_rep" kind="class" language="C++" prot="public">
+    <compoundname>CustomerServiceRep</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_customer_service_rep_1a762e870c4e0e2739ff62caaf6680c52d" prot="private" static="no" mutable="no">
+        <type><ref refid="class_customer" kindref="compound">Customer</ref></type>
+        <definition>Customer CustomerServiceRep::m_customer</definition>
+        <argsstring></argsstring>
+        <name>m_customer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomerServiceRep.h" line="22" column="14" bodyfile="CustomerServiceRep.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_customer_service_rep_1a05c571f1422854448115eed55889ca0c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CustomerServiceRep::m_helpStart</definition>
+        <argsstring></argsstring>
+        <name>m_helpStart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The customer that this rep is currently helping </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomerServiceRep.h" line="23" column="14" bodyfile="CustomerServiceRep.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_customer_service_rep_1a6327e35e1ffd662d8762ebe571c9dd63" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CustomerServiceRep::m_isHelping</definition>
+        <argsstring></argsstring>
+        <name>m_isHelping</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>the time at which the rep started helping the customer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomerServiceRep.h" line="24" column="14" bodyfile="CustomerServiceRep.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_customer_service_rep_1ac86a6f3ef279819197ae19389c444f27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CustomerServiceRep::CustomerServiceRep</definition>
+        <argsstring>(int simTime, Customer cust)</argsstring>
+        <name>CustomerServiceRep</name>
+        <param>
+          <type>int</type>
+          <declname>simTime</declname>
+        </param>
+        <param>
+          <type><ref refid="class_customer" kindref="compound">Customer</ref></type>
+          <declname>cust</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>whether the rep is helping a customer currently </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomerServiceRep.h" line="35" column="5" bodyfile="CustomerServiceRep.cpp" bodystart="6" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_customer_service_rep_1a2d6cd4f39d6bc428e7090e4a35f3338c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CustomerServiceRep::CustomerServiceRep</definition>
+        <argsstring>()</argsstring>
+        <name>CustomerServiceRep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_customer_service_rep_1a2d6cd4f39d6bc428e7090e4a35f3338c" kindref="member">CustomerServiceRep()</ref>  default constructor. The rep is not helping anyone after this constructor is called. Initializes member variables to defaults </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomerServiceRep.h" line="41" column="5" bodyfile="CustomerServiceRep.cpp" bodystart="21" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_customer_service_rep_1ad1b7d1f5c44d5073c500d7fa2fd16876" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CustomerServiceRep::CustomerServiceRep</definition>
+        <argsstring>(const CustomerServiceRep &amp;otherRep)</argsstring>
+        <name>CustomerServiceRep</name>
+        <param>
+          <type>const <ref refid="class_customer_service_rep" kindref="compound">CustomerServiceRep</ref> &amp;</type>
+          <declname>otherRep</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_customer_service_rep_1ad1b7d1f5c44d5073c500d7fa2fd16876" kindref="member">CustomerServiceRep(const CustomerServiceRep &amp;)</ref>  Copy constructor. Sets the rep to have the same member variables as the given rep </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomerServiceRep.h" line="47" column="5" bodyfile="CustomerServiceRep.cpp" bodystart="14" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_customer_service_rep_1ac88a86d81594b949536c4daddb15d31b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CustomerServiceRep::~CustomerServiceRep</definition>
+        <argsstring>()</argsstring>
+        <name>~CustomerServiceRep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_customer_service_rep_1ac88a86d81594b949536c4daddb15d31b" kindref="member">~CustomerServiceRep()</ref>;  destructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomerServiceRep.h" line="52" column="5" bodyfile="CustomerServiceRep.cpp" bodystart="27" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_customer_service_rep_1ad05ca3dacc5a08c6edcb0884af4cf11e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CustomerServiceRep::isBusy</definition>
+        <argsstring>() const</argsstring>
+        <name>isBusy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_customer_service_rep_1ad05ca3dacc5a08c6edcb0884af4cf11e" kindref="member">isBusy() const</ref>  this function returns whether the rep is currently helping a customer <simplesect kind="return"><para>whether the rep is currently helping a customer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomerServiceRep.h" line="58" column="10" bodyfile="CustomerServiceRep.cpp" bodystart="31" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_customer_service_rep_1ab2c02bd7abaaf3768286a24f864389dd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CustomerServiceRep::getTimeSpentOnCustomer</definition>
+        <argsstring>(int simTime) const</argsstring>
+        <name>getTimeSpentOnCustomer</name>
+        <param>
+          <type>int</type>
+          <declname>simTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_customer_service_rep_1ab2c02bd7abaaf3768286a24f864389dd" kindref="member">getTimeSpentOnCustomer(int) const</ref>  this function determines how much simulation time has elapsed since the rep began helping its current customer until the given simulation time <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>simTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current simulation time </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the amount of time the rep has been helping its current customer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomerServiceRep.h" line="67" column="9" bodyfile="CustomerServiceRep.cpp" bodystart="36" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_customer_service_rep_1a3c5a0f037f9a1a3d1ffea5a29ebe3ba4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CustomerServiceRep::startHelping</definition>
+        <argsstring>(int simTime, Customer cust)</argsstring>
+        <name>startHelping</name>
+        <param>
+          <type>int</type>
+          <declname>simTime</declname>
+        </param>
+        <param>
+          <type><ref refid="class_customer" kindref="compound">Customer</ref></type>
+          <declname>cust</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_customer_service_rep_1a3c5a0f037f9a1a3d1ffea5a29ebe3ba4" kindref="member">startHelping(int, Customer)</ref>  this function assigns the given customer to the rep at the given simulation time. Sets whether the rep is busy to true <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>simTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current simulation time </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cust</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the customer to help </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomerServiceRep.h" line="75" column="10" bodyfile="CustomerServiceRep.cpp" bodystart="41" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_customer_service_rep_1aa786a61ac4e8b6920ff0ab0b9c82e9f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CustomerServiceRep::finishCustomer</definition>
+        <argsstring>(int simTime)</argsstring>
+        <name>finishCustomer</name>
+        <param>
+          <type>int</type>
+          <declname>simTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_customer_service_rep_1aa786a61ac4e8b6920ff0ab0b9c82e9f4" kindref="member">finishCustomer(int)</ref>  this function sets the rep to be not helping a customer anymore, and the customer it is currently helping is passed the given simulation time as the time at which they were helped. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>simTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current simulation time </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomerServiceRep.h" line="84" column="10" bodyfile="CustomerServiceRep.cpp" bodystart="49" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_customer_service_rep_1a09665d1e25d7853964295e91c35a7743" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_customer" kindref="compound">Customer</ref></type>
+        <definition>Customer CustomerServiceRep::getCustomer</definition>
+        <argsstring>() const</argsstring>
+        <name>getCustomer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_customer_service_rep_1a09665d1e25d7853964295e91c35a7743" kindref="member">getCustomer() const</ref>  this function returns the customer the rep is currently helping <simplesect kind="return"><para>the customer the rep is helping </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomerServiceRep.h" line="90" column="14" bodyfile="CustomerServiceRep.cpp" bodystart="56" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_customer_service_rep_1a4359ba4a6dba367709ca27a7077705a9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CustomerServiceRep::getHelpStart</definition>
+        <argsstring>() const</argsstring>
+        <name>getHelpStart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_customer_service_rep_1a4359ba4a6dba367709ca27a7077705a9" kindref="member">getHelpStart()</ref>  this function returns the time at which the rep started helping its current customer <simplesect kind="return"><para>the time the rep started on the current customer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomerServiceRep.h" line="97" column="9" bodyfile="CustomerServiceRep.cpp" bodystart="61" bodyend="64"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="CustomerServiceRep.h" line="19" column="1" bodyfile="CustomerServiceRep.h" bodystart="20" bodyend="98"/>
+    <listofallmembers>
+      <member refid="class_customer_service_rep_1ac86a6f3ef279819197ae19389c444f27" prot="public" virt="non-virtual"><scope>CustomerServiceRep</scope><name>CustomerServiceRep</name></member>
+      <member refid="class_customer_service_rep_1a2d6cd4f39d6bc428e7090e4a35f3338c" prot="public" virt="non-virtual"><scope>CustomerServiceRep</scope><name>CustomerServiceRep</name></member>
+      <member refid="class_customer_service_rep_1ad1b7d1f5c44d5073c500d7fa2fd16876" prot="public" virt="non-virtual"><scope>CustomerServiceRep</scope><name>CustomerServiceRep</name></member>
+      <member refid="class_customer_service_rep_1aa786a61ac4e8b6920ff0ab0b9c82e9f4" prot="public" virt="non-virtual"><scope>CustomerServiceRep</scope><name>finishCustomer</name></member>
+      <member refid="class_customer_service_rep_1a09665d1e25d7853964295e91c35a7743" prot="public" virt="non-virtual"><scope>CustomerServiceRep</scope><name>getCustomer</name></member>
+      <member refid="class_customer_service_rep_1a4359ba4a6dba367709ca27a7077705a9" prot="public" virt="non-virtual"><scope>CustomerServiceRep</scope><name>getHelpStart</name></member>
+      <member refid="class_customer_service_rep_1ab2c02bd7abaaf3768286a24f864389dd" prot="public" virt="non-virtual"><scope>CustomerServiceRep</scope><name>getTimeSpentOnCustomer</name></member>
+      <member refid="class_customer_service_rep_1ad05ca3dacc5a08c6edcb0884af4cf11e" prot="public" virt="non-virtual"><scope>CustomerServiceRep</scope><name>isBusy</name></member>
+      <member refid="class_customer_service_rep_1a762e870c4e0e2739ff62caaf6680c52d" prot="private" virt="non-virtual"><scope>CustomerServiceRep</scope><name>m_customer</name></member>
+      <member refid="class_customer_service_rep_1a05c571f1422854448115eed55889ca0c" prot="private" virt="non-virtual"><scope>CustomerServiceRep</scope><name>m_helpStart</name></member>
+      <member refid="class_customer_service_rep_1a6327e35e1ffd662d8762ebe571c9dd63" prot="private" virt="non-virtual"><scope>CustomerServiceRep</scope><name>m_isHelping</name></member>
+      <member refid="class_customer_service_rep_1a3c5a0f037f9a1a3d1ffea5a29ebe3ba4" prot="public" virt="non-virtual"><scope>CustomerServiceRep</scope><name>startHelping</name></member>
+      <member refid="class_customer_service_rep_1ac88a86d81594b949536c4daddb15d31b" prot="public" virt="non-virtual"><scope>CustomerServiceRep</scope><name>~CustomerServiceRep</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,219 @@
+/*  Class:      HashTable
+    Author:     Ryan Wood
+    Purpose:    demonstrate an understanding of hash tables and how
+                they work to make data storage faster and simpler.
+                In order to use this Hash Table, the datatype must
+                include a string member named key and a member named nodeLink,
+                which is a pointer to another item of the same data type
+    Created On: April 14, 2018
+*/
+/*Hash Table implementation*/
+
+using namespace std;
+
+template<typename type, size_t CAPACITY>
+HashTable<type, CAPACITY>::HashTable()
+{
+    int index = 0;
+
+    list        = new List<LinkedList<type, numListVals>*, CAPACITY>;
+    numElements = 0;
+    
+    for(index = 0; index < CAPACITY; index++)
+    {
+        LinkedList<type, numListVals> *linky = new LinkedList<type, numListVals>;
+        list->insertAfter(linky);
+        list->next();
+    }
+}
+
+template<typename type, size_t CAPACITY>
+void HashTable<type, CAPACITY>::insert(element item)
+{
+    int    index = 0;
+    string key;
+
+    key   = item->key;
+    index = hash(key);
+
+    if(!(list->getElement(index)->isFull()))
+    {
+        list->getElement(index)->insert(item);
+        numElements++;
+    }
+    else
+    {
+        cout << "Unable to add the element " << *item 
+             << "to the Hash Table" << endl;
+    }
+}
+
+template<typename type, size_t CAPACITY>
+type* HashTable<type, CAPACITY>::getElement(string key) const
+{
+    element item  = NULL;
+    int     index = 0;
+
+    index = hash(key);
+    item = list->getElement(index)->find(key);
+
+    return item;
+}
+
+template<typename type, size_t CAPACITY>
+void HashTable<type, CAPACITY>::remove(string key)
+{
+    int     index = 0;
+    element item  = NULL;
+
+    index = hash(key);
+    item  = list->getElement(index)->find(key); 
+
+    if(NULL != item)
+    {
+        list->getElement(index)->remove(item);
+        numElements--;
+    }
+}
+
+template<typename type, size_t CAPACITY>
+bool HashTable<type, CAPACITY>::isPresent(string key) const
+{
+    int     index = 0;
+    element item  = NULL;
+
+    index = hash(key);
+    item = list->getElement(index)->find(key);
+
+    return(NULL != item);
+}
+        
+template<typename type, size_t CAPACITY>
+size_t HashTable<type, CAPACITY>::size() const
+{
+    return numElements;
+}
+
+template<typename type, size_t CAPACITY>
+int HashTable<type, CAPACITY>::hash(string key) const
+{
+    int sumKey  = 0;
+    int keySize = 0;
+    int iHash   = 0;
+    int count   = 0;
+
+    keySize = key.length();
+    for(count = 0; count < keySize; count++)
+    {
+        sumKey = sumKey *7 + key[count];
+    }
+    sumKey*= count;
+
+    iHash = sumKey % CAPACITY;
+    return iHash;
+}
+
+template<typename type, size_t CAPACITY>
+int HashTable<type, CAPACITY>::getNumCollisions() const
+{
+    int count = 0;
+
+    list->first();
+    while(list->getPos() < list->getCapacity()-1)
+    {
+        if(list->getElement()->size() > 1)
+            count+= list->getElement()->size()-1;
+
+        list->next();
+    }
+    if(list->getElement()->size() > 1)
+        count+= list->getElement()->size()-1;
+
+    return count;
+}
+
+template<typename type, size_t CAPACITY>
+int HashTable<type, CAPACITY>::getNumDataHoles() const
+{
+    int count = 0;
+
+    list->first();
+    while(list->getPos() < list->getCapacity()-1)
+    {
+        if(list->getElement()->isEmpty())
+            count++;
+        list->next();
+    }
+    if(list->getElement()->isEmpty())
+        count++;
+
+    return count;
+}
+
+template<typename type, size_t CAPACITY>
+void HashTable<type, CAPACITY>::print() const
+{
+    list->first();
+    while(list->getPos() < list->getCapacity()-1)
+    {
+        if(!list->getElement()->isEmpty())
+            cout << *list->getElement();
+        else
+            cout << "Data Hole" << endl;
+
+        list->next();
+    }
+    if(!list->getElement()->isEmpty())
+        cout << *list->getElement();
+    else
+        cout << "Data Hole" << endl;
+}
+
+
+template<typename type, size_t CAPACITY>
+std::ostream &HashTable<type, CAPACITY>::print(std::ostream &out) const
+{
+    list->first();
+    while(list->getPos() < list->getCapacity() -1)
+    {
+        out.flush();
+        if(!list->getElement()->isEmpty())
+            out << *(list->getElement());
+        else
+            out << "Data Hole" << endl;
+
+        list->next();
+    }
+    return out;
+}
+
+template<typename type, size_t CAPACITY>
+std::ofstream &HashTable<type, CAPACITY>::print(std::ofstream &out) const
+{
+    list->first();
+    while(list->getPos() < list->getCapacity() -1)
+    {
+        out.flush();
+        if(!list->getElement()->isEmpty())
+            out << *(list->getElement());
+        else
+            out << "Data Hole" << endl;
+
+        list->next();
+    }
+    return out;
+}
+
+template<typename type, size_t CAPACITY>
+std::ostream &operator<<(std::ostream &out, const HashTable<type, CAPACITY> &table)
+{
+    return table.print(out);
+}
+
+template<typename type, size_t CAPACITY>
+std::ofstream &operator<<(std::ofstream &out, const HashTable<type, CAPACITY> &table)
+{
+    return table.print(out);
+}
+
+

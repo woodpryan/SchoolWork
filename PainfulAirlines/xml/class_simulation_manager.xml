@@ -1,0 +1,484 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.20" xml:lang="en-US">
+  <compounddef id="class_simulation_manager" kind="class" language="C++" prot="public">
+    <compoundname>SimulationManager</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_simulation_manager_1abfbe0847bac2c3232cbfa0f8e3696e8c" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int SimulationManager::ECON_GEN_RATE</definition>
+        <argsstring></argsstring>
+        <name>ECON_GEN_RATE</name>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimulationManager.h" line="47" column="22" bodyfile="SimulationManager.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulation_manager_1ad7f7b06d713299bba9a93df61dc79dca" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int SimulationManager::BUS_GEN_RATE</definition>
+        <argsstring></argsstring>
+        <name>BUS_GEN_RATE</name>
+        <initializer>= 15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimulationManager.h" line="48" column="22" bodyfile="SimulationManager.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulation_manager_1a4cbb1c29fc3f0a61fbef080a9f192355" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int SimulationManager::FIRST_CLASS_GEN_RATE</definition>
+        <argsstring></argsstring>
+        <name>FIRST_CLASS_GEN_RATE</name>
+        <initializer>= 30</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimulationManager.h" line="49" column="22" bodyfile="SimulationManager.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_simulation_manager_1a05a0f269781bb6ab2c1b416999a2a667" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_time_range" kindref="compound">TimeRange</ref></type>
+        <definition>TimeRange SimulationManager::econAssistRate</definition>
+        <argsstring></argsstring>
+        <name>econAssistRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimulationManager.h" line="51" column="15" bodyfile="SimulationManager.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulation_manager_1a89de62b59589e723ff7ecd49d109d477" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_time_range" kindref="compound">TimeRange</ref></type>
+        <definition>TimeRange SimulationManager::busAssistRate</definition>
+        <argsstring></argsstring>
+        <name>busAssistRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimulationManager.h" line="52" column="15" bodyfile="SimulationManager.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulation_manager_1a0e56190ee75ed2878ca15a0e4b878409" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_time_range" kindref="compound">TimeRange</ref></type>
+        <definition>TimeRange SimulationManager::firstClassAssistRate</definition>
+        <argsstring></argsstring>
+        <name>firstClassAssistRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimulationManager.h" line="53" column="15" bodyfile="SimulationManager.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulation_manager_1ab29f72dfb5aa659639b0102887552676" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_customer_service_rep" kindref="compound">CustomerServiceRep</ref> &gt;</type>
+        <definition>vector&lt;CustomerServiceRep&gt; SimulationManager::m_customerServiceReps</definition>
+        <argsstring></argsstring>
+        <name>m_customerServiceReps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimulationManager.h" line="55" column="12" bodyfile="SimulationManager.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulation_manager_1a3a30b68857b47b673db4fc5946839011" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_customer" kindref="compound">Customer</ref> &gt;</type>
+        <definition>vector&lt;Customer&gt; SimulationManager::m_helpedCustomers</definition>
+        <argsstring></argsstring>
+        <name>m_helpedCustomers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimulationManager.h" line="56" column="22" bodyfile="SimulationManager.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulation_manager_1a0056c4c423072582e66be0f44eea3b18" prot="private" static="no" mutable="no">
+        <type>vector&lt; line &gt;</type>
+        <definition>vector&lt;line&gt; SimulationManager::m_lines</definition>
+        <argsstring></argsstring>
+        <name>m_lines</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimulationManager.h" line="57" column="26" bodyfile="SimulationManager.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulation_manager_1af1b48e0abf77b4f1738f6257498562ad" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SimulationManager::m_timeTarget</definition>
+        <argsstring></argsstring>
+        <name>m_timeTarget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimulationManager.h" line="59" column="9" bodyfile="SimulationManager.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulation_manager_1a7676f5a7f0f466898973ae90500a8836" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SimulationManager::m_time</definition>
+        <argsstring></argsstring>
+        <name>m_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimulationManager.h" line="60" column="9" bodyfile="SimulationManager.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulation_manager_1a3275ef7540abb64951d7e6bc3a064190" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SimulationManager::m_maxLineLengths[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>m_maxLineLengths</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimulationManager.h" line="62" column="9" bodyfile="SimulationManager.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulation_manager_1ae7d8f5d20c274db5166cc6116b646f55" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SimulationManager::m_lineLengthTotals[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>m_lineLengthTotals</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimulationManager.h" line="63" column="9" bodyfile="SimulationManager.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_simulation_manager_1a5ff3bcee43f2da414a6fa9df17b7572f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SimulationManager::updateHelpStatus</definition>
+        <argsstring>(CustomerType custType)</argsstring>
+        <name>updateHelpStatus</name>
+        <param>
+          <type>CustomerType</type>
+          <declname>custType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_simulation_manager_1a5ff3bcee43f2da414a6fa9df17b7572f" kindref="member">updateHelpStatus(CustomerType)</ref>  For the given customer type, this function retrieves the customer service rep and, if they are busy helping a customer, determines how long they have been helping the customer. If it is within the range of time it should take to help, this function essentially flips a coin to determine whether they will finish this customer at the current time tick. If it is determined its time to finish via coin flip or because the max time it should take to help has been reached, the rep finishes the customer they currently are helping, which sets the amount of time it took for the customer to be helped. The customer is added to the list of customers that have been helped. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>the</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>customer type as any of CustomerType </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimulationManager.h" line="78" column="10" bodyfile="SimulationManager.cpp" bodystart="108" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_manager_1afb96f0e6737629ff0f4b422f12499117" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SimulationManager::inRange</definition>
+        <argsstring>(TimeRange tr, int simTime)</argsstring>
+        <name>inRange</name>
+        <param>
+          <type><ref refid="struct_time_range" kindref="compound">TimeRange</ref></type>
+          <declname>tr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>simTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_simulation_manager_1afb96f0e6737629ff0f4b422f12499117" kindref="member">inRange(TimeRange, int)</ref>  this function determines if, for a given time range and amount of time, whether the given time is within the range. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the time range as a <ref refid="struct_time_range" kindref="compound">TimeRange</ref> structure </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>simTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the amount of time that has passed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>whether the time is within the range </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimulationManager.h" line="87" column="9" bodyfile="SimulationManager.cpp" bodystart="98" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_manager_1a5a45ca89e85997322aa9995472dc4c37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_time_range" kindref="compound">TimeRange</ref></type>
+        <definition>TimeRange SimulationManager::getAssistRange</definition>
+        <argsstring>(CustomerType custType)</argsstring>
+        <name>getAssistRange</name>
+        <param>
+          <type>CustomerType</type>
+          <declname>custType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_simulation_manager_1a5a45ca89e85997322aa9995472dc4c37" kindref="member">getAssistRange(CustomerType)</ref>  for the given customer rep type, this function returns the range of time it should take to help that customer. Different reps take a different range of time to help a customer, regardless of the type of customer they are actually helping. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>custType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of customer service representative </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the range of time it takes the rep to help a customer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimulationManager.h" line="97" column="15" bodyfile="SimulationManager.cpp" bodystart="80" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_manager_1acba2b3e6ce16c7f6e9fef8c83e6d904a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SimulationManager::enqueueCustomer</definition>
+        <argsstring>(CustomerType custType)</argsstring>
+        <name>enqueueCustomer</name>
+        <param>
+          <type>CustomerType</type>
+          <declname>custType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_simulation_manager_1acba2b3e6ce16c7f6e9fef8c83e6d904a" kindref="member">enqueueCustomer(CustomerType)</ref>  for the given customer type, this function generates a customer at with the current sim time as its time that it started waiting. Adds the customer to the appropriate line according to its customer type <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>custType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of customer to enqueue </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimulationManager.h" line="106" column="10" bodyfile="SimulationManager.cpp" bodystart="73" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_manager_1a6d8400ce8c97269c22c9382a3f0e643d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SimulationManager::helpCustomers</definition>
+        <argsstring>(CustomerType custType)</argsstring>
+        <name>helpCustomers</name>
+        <param>
+          <type>CustomerType</type>
+          <declname>custType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_simulation_manager_1a6d8400ce8c97269c22c9382a3f0e643d" kindref="member">helpCustomers(CustomerType)</ref>  this function helps customers of the given type. retrieves the next customer in line from the appropriate line. If there is a representative available to help the customer, pops the customer out of the line and assigns it to the available rep. If the customer is of a type less than first class and the rep that should help the customer is busy, the rep for the next class type is assigned to the customer. For an economy customer, if the economy rep is busy the business rep is checked, and if they are busy, they first class rep is checked. If all reps are currently busy, the customer continues to wait at least until the next time this function is called. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>custType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of customer to help as any of CustomerType </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimulationManager.h" line="121" column="10" bodyfile="SimulationManager.cpp" bodystart="137" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_manager_1aaa7c7d399035c7adf3163363270523d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string SimulationManager::toString</definition>
+        <argsstring>(CustomerType custType)</argsstring>
+        <name>toString</name>
+        <param>
+          <type>CustomerType</type>
+          <declname>custType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_simulation_manager_1aaa7c7d399035c7adf3163363270523d6" kindref="member">toString(CustomerType)</ref>  for the given customer type enumeration value, this function returns a string representation of that value. So, given CustomerType.FIRS_CLASS, returns &quot;First Class&quot; <simplesect kind="return"><para>the customer type as a string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimulationManager.h" line="129" column="12" bodyfile="SimulationManager.cpp" bodystart="200" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_manager_1a1d6934595cc3a115f8b602c020277d0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SimulationManager::printLine</definition>
+        <argsstring>(CustomerType custType)</argsstring>
+        <name>printLine</name>
+        <param>
+          <type>CustomerType</type>
+          <declname>custType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_simulation_manager_1a1d6934595cc3a115f8b602c020277d0e" kindref="member">printLine(CustomerType)</ref>  this function prints information about the line that holds the given customer type. Prints how many customers of this type are currently in line and, if the customer service rep for this type is busy, what type of customer they are helping at the moment. Also prints whether the customer rep is not helping anyone. If this function is alled at the end of sim time, it also prints the average amount of time customers waited in the given line type, the longest amount of time a customer of this type waited, and the total number of customers of this type that were helped. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>custType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of customer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimulationManager.h" line="143" column="10" bodyfile="SimulationManager.cpp" bodystart="216" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_manager_1ae884c8b7c710890f03611a213c6890e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SimulationManager::SimulationManager</definition>
+        <argsstring>(int targetTime)</argsstring>
+        <name>SimulationManager</name>
+        <param>
+          <type>int</type>
+          <declname>targetTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_simulation_manager_1ae884c8b7c710890f03611a213c6890e4" kindref="member">SimulationManager(int)</ref>  this parameterized constructor takes the number of minutes for which the simulation should run and initializes the member variables of the simulation, adding three customer service reps to the list of reps, setting the three time ranges for the customer service reps, creating the three customer queues, and initializing the maxLineLength and lineWaitTotal arrays to have three zero values. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>the</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of minutes of sim tim </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimulationManager.h" line="155" column="5" bodyfile="SimulationManager.cpp" bodystart="12" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_manager_1a7e7d91e87e35cb25fb13f5e439257488" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SimulationManager::~SimulationManager</definition>
+        <argsstring>()</argsstring>
+        <name>~SimulationManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_simulation_manager_1a7e7d91e87e35cb25fb13f5e439257488" kindref="member">~SimulationManager()</ref>  destructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimulationManager.h" line="160" column="5" bodyfile="SimulationManager.cpp" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_manager_1a687803bfcadb7172273bee083b423ac9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SimulationManager::timeTick</definition>
+        <argsstring>()</argsstring>
+        <name>timeTick</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Functinon: <ref refid="class_simulation_manager_1a687803bfcadb7172273bee083b423ac9" kindref="member">timeTick()</ref>  This function increments the simulation time by one. For each time increment, customers may be generated depending on the generation rates and they may be enqueued, customers may be assigned to representatives if they are not all busy, customers that are currently being helped may be finished depending on the amount of time they&apos;ve been assigned and how long it takes the reps to help a customer, customers may be removed from the queue, or the simulation may finish. Calls the functions that handle all these things, starting with the first class customer type and ending with the economy customer type.. <simplesect kind="return"><para>whether time remains in the simulation </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimulationManager.h" line="174" column="10" bodyfile="SimulationManager.cpp" bodystart="162" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulation_manager_1acec1cda126401b604e30cd050bae6d21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SimulationManager::printLines</definition>
+        <argsstring>()</argsstring>
+        <name>printLines</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_simulation_manager_1acec1cda126401b604e30cd050bae6d21" kindref="member">printLines()</ref>  this function prints information about the three lines. Simply calls the printLine function for each of the different customer types. Prints the information to a file in the execution directory called Output.out. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimulationManager.h" line="182" column="10" bodyfile="SimulationManager.cpp" bodystart="264" bodyend="272"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SimulationManager.h" line="43" column="1" bodyfile="SimulationManager.h" bodystart="44" bodyend="183"/>
+    <listofallmembers>
+      <member refid="class_simulation_manager_1ad7f7b06d713299bba9a93df61dc79dca" prot="private" virt="non-virtual"><scope>SimulationManager</scope><name>BUS_GEN_RATE</name></member>
+      <member refid="class_simulation_manager_1a89de62b59589e723ff7ecd49d109d477" prot="private" virt="non-virtual"><scope>SimulationManager</scope><name>busAssistRate</name></member>
+      <member refid="class_simulation_manager_1abfbe0847bac2c3232cbfa0f8e3696e8c" prot="private" virt="non-virtual"><scope>SimulationManager</scope><name>ECON_GEN_RATE</name></member>
+      <member refid="class_simulation_manager_1a05a0f269781bb6ab2c1b416999a2a667" prot="private" virt="non-virtual"><scope>SimulationManager</scope><name>econAssistRate</name></member>
+      <member refid="class_simulation_manager_1acba2b3e6ce16c7f6e9fef8c83e6d904a" prot="public" virt="non-virtual"><scope>SimulationManager</scope><name>enqueueCustomer</name></member>
+      <member refid="class_simulation_manager_1a4cbb1c29fc3f0a61fbef080a9f192355" prot="private" virt="non-virtual"><scope>SimulationManager</scope><name>FIRST_CLASS_GEN_RATE</name></member>
+      <member refid="class_simulation_manager_1a0e56190ee75ed2878ca15a0e4b878409" prot="private" virt="non-virtual"><scope>SimulationManager</scope><name>firstClassAssistRate</name></member>
+      <member refid="class_simulation_manager_1a5a45ca89e85997322aa9995472dc4c37" prot="public" virt="non-virtual"><scope>SimulationManager</scope><name>getAssistRange</name></member>
+      <member refid="class_simulation_manager_1a6d8400ce8c97269c22c9382a3f0e643d" prot="public" virt="non-virtual"><scope>SimulationManager</scope><name>helpCustomers</name></member>
+      <member refid="class_simulation_manager_1afb96f0e6737629ff0f4b422f12499117" prot="public" virt="non-virtual"><scope>SimulationManager</scope><name>inRange</name></member>
+      <member refid="class_simulation_manager_1ab29f72dfb5aa659639b0102887552676" prot="private" virt="non-virtual"><scope>SimulationManager</scope><name>m_customerServiceReps</name></member>
+      <member refid="class_simulation_manager_1a3a30b68857b47b673db4fc5946839011" prot="private" virt="non-virtual"><scope>SimulationManager</scope><name>m_helpedCustomers</name></member>
+      <member refid="class_simulation_manager_1ae7d8f5d20c274db5166cc6116b646f55" prot="private" virt="non-virtual"><scope>SimulationManager</scope><name>m_lineLengthTotals</name></member>
+      <member refid="class_simulation_manager_1a0056c4c423072582e66be0f44eea3b18" prot="private" virt="non-virtual"><scope>SimulationManager</scope><name>m_lines</name></member>
+      <member refid="class_simulation_manager_1a3275ef7540abb64951d7e6bc3a064190" prot="private" virt="non-virtual"><scope>SimulationManager</scope><name>m_maxLineLengths</name></member>
+      <member refid="class_simulation_manager_1a7676f5a7f0f466898973ae90500a8836" prot="private" virt="non-virtual"><scope>SimulationManager</scope><name>m_time</name></member>
+      <member refid="class_simulation_manager_1af1b48e0abf77b4f1738f6257498562ad" prot="private" virt="non-virtual"><scope>SimulationManager</scope><name>m_timeTarget</name></member>
+      <member refid="class_simulation_manager_1a1d6934595cc3a115f8b602c020277d0e" prot="public" virt="non-virtual"><scope>SimulationManager</scope><name>printLine</name></member>
+      <member refid="class_simulation_manager_1acec1cda126401b604e30cd050bae6d21" prot="public" virt="non-virtual"><scope>SimulationManager</scope><name>printLines</name></member>
+      <member refid="class_simulation_manager_1ae884c8b7c710890f03611a213c6890e4" prot="public" virt="non-virtual"><scope>SimulationManager</scope><name>SimulationManager</name></member>
+      <member refid="class_simulation_manager_1a687803bfcadb7172273bee083b423ac9" prot="public" virt="non-virtual"><scope>SimulationManager</scope><name>timeTick</name></member>
+      <member refid="class_simulation_manager_1aaa7c7d399035c7adf3163363270523d6" prot="public" virt="non-virtual"><scope>SimulationManager</scope><name>toString</name></member>
+      <member refid="class_simulation_manager_1a5ff3bcee43f2da414a6fa9df17b7572f" prot="public" virt="non-virtual"><scope>SimulationManager</scope><name>updateHelpStatus</name></member>
+      <member refid="class_simulation_manager_1a7e7d91e87e35cb25fb13f5e439257488" prot="public" virt="non-virtual"><scope>SimulationManager</scope><name>~SimulationManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

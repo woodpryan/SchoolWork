@@ -1,0 +1,154 @@
+\hypertarget{class_simulation_manager}{}\doxysection{Simulation\+Manager Class Reference}
+\label{class_simulation_manager}\index{SimulationManager@{SimulationManager}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_simulation_manager_a5ff3bcee43f2da414a6fa9df17b7572f}{update\+Help\+Status}} (Customer\+Type cust\+Type)
+\item 
+int \mbox{\hyperlink{class_simulation_manager_afb96f0e6737629ff0f4b422f12499117}{in\+Range}} (\mbox{\hyperlink{struct_time_range}{Time\+Range}} tr, int sim\+Time)
+\item 
+\mbox{\hyperlink{struct_time_range}{Time\+Range}} \mbox{\hyperlink{class_simulation_manager_a5a45ca89e85997322aa9995472dc4c37}{get\+Assist\+Range}} (Customer\+Type cust\+Type)
+\item 
+void \mbox{\hyperlink{class_simulation_manager_acba2b3e6ce16c7f6e9fef8c83e6d904a}{enqueue\+Customer}} (Customer\+Type cust\+Type)
+\item 
+void \mbox{\hyperlink{class_simulation_manager_a6d8400ce8c97269c22c9382a3f0e643d}{help\+Customers}} (Customer\+Type cust\+Type)
+\item 
+string \mbox{\hyperlink{class_simulation_manager_aaa7c7d399035c7adf3163363270523d6}{to\+String}} (Customer\+Type cust\+Type)
+\item 
+void \mbox{\hyperlink{class_simulation_manager_a1d6934595cc3a115f8b602c020277d0e}{print\+Line}} (Customer\+Type cust\+Type)
+\item 
+\mbox{\hyperlink{class_simulation_manager_ae884c8b7c710890f03611a213c6890e4}{Simulation\+Manager}} (int target\+Time)
+\item 
+\mbox{\hyperlink{class_simulation_manager_a7e7d91e87e35cb25fb13f5e439257488}{$\sim$\+Simulation\+Manager}} ()
+\item 
+bool \mbox{\hyperlink{class_simulation_manager_a687803bfcadb7172273bee083b423ac9}{time\+Tick}} ()
+\item 
+void \mbox{\hyperlink{class_simulation_manager_acec1cda126401b604e30cd050bae6d21}{print\+Lines}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_simulation_manager_ae884c8b7c710890f03611a213c6890e4}\label{class_simulation_manager_ae884c8b7c710890f03611a213c6890e4}} 
+\index{SimulationManager@{SimulationManager}!SimulationManager@{SimulationManager}}
+\index{SimulationManager@{SimulationManager}!SimulationManager@{SimulationManager}}
+\doxysubsubsection{\texorpdfstring{SimulationManager()}{SimulationManager()}}
+{\footnotesize\ttfamily Simulation\+Manager\+::\+Simulation\+Manager (\begin{DoxyParamCaption}\item[{int}]{target\+Time }\end{DoxyParamCaption})}
+
+Function\+: \mbox{\hyperlink{class_simulation_manager_ae884c8b7c710890f03611a213c6890e4}{Simulation\+Manager(int)}}  this parameterized constructor takes the number of minutes for which the simulation should run and initializes the member variables of the simulation, adding three customer service reps to the list of reps, setting the three time ranges for the customer service reps, creating the three customer queues, and initializing the max\+Line\+Length and line\+Wait\+Total arrays to have three zero values. 
+\begin{DoxyParams}{Parameters}
+{\em the} & number of minutes of sim tim \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_simulation_manager_a7e7d91e87e35cb25fb13f5e439257488}\label{class_simulation_manager_a7e7d91e87e35cb25fb13f5e439257488}} 
+\index{SimulationManager@{SimulationManager}!````~SimulationManager@{$\sim$SimulationManager}}
+\index{````~SimulationManager@{$\sim$SimulationManager}!SimulationManager@{SimulationManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$SimulationManager()}{~SimulationManager()}}
+{\footnotesize\ttfamily Simulation\+Manager\+::$\sim$\+Simulation\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function\+: \mbox{\hyperlink{class_simulation_manager_a7e7d91e87e35cb25fb13f5e439257488}{$\sim$\+Simulation\+Manager()}}  destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_simulation_manager_acba2b3e6ce16c7f6e9fef8c83e6d904a}\label{class_simulation_manager_acba2b3e6ce16c7f6e9fef8c83e6d904a}} 
+\index{SimulationManager@{SimulationManager}!enqueueCustomer@{enqueueCustomer}}
+\index{enqueueCustomer@{enqueueCustomer}!SimulationManager@{SimulationManager}}
+\doxysubsubsection{\texorpdfstring{enqueueCustomer()}{enqueueCustomer()}}
+{\footnotesize\ttfamily void Simulation\+Manager\+::enqueue\+Customer (\begin{DoxyParamCaption}\item[{Customer\+Type}]{cust\+Type }\end{DoxyParamCaption})}
+
+Function\+: \mbox{\hyperlink{class_simulation_manager_acba2b3e6ce16c7f6e9fef8c83e6d904a}{enqueue\+Customer(\+Customer\+Type)}}  for the given customer type, this function generates a customer at with the current sim time as its time that it started waiting. Adds the customer to the appropriate line according to its customer type 
+\begin{DoxyParams}{Parameters}
+{\em cust\+Type} & the type of customer to enqueue \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_simulation_manager_a5a45ca89e85997322aa9995472dc4c37}\label{class_simulation_manager_a5a45ca89e85997322aa9995472dc4c37}} 
+\index{SimulationManager@{SimulationManager}!getAssistRange@{getAssistRange}}
+\index{getAssistRange@{getAssistRange}!SimulationManager@{SimulationManager}}
+\doxysubsubsection{\texorpdfstring{getAssistRange()}{getAssistRange()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_time_range}{Time\+Range}} Simulation\+Manager\+::get\+Assist\+Range (\begin{DoxyParamCaption}\item[{Customer\+Type}]{cust\+Type }\end{DoxyParamCaption})}
+
+Function\+: \mbox{\hyperlink{class_simulation_manager_a5a45ca89e85997322aa9995472dc4c37}{get\+Assist\+Range(\+Customer\+Type)}}  for the given customer rep type, this function returns the range of time it should take to help that customer. Different reps take a different range of time to help a customer, regardless of the type of customer they are actually helping. 
+\begin{DoxyParams}{Parameters}
+{\em cust\+Type} & the type of customer service representative \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the range of time it takes the rep to help a customer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_simulation_manager_a6d8400ce8c97269c22c9382a3f0e643d}\label{class_simulation_manager_a6d8400ce8c97269c22c9382a3f0e643d}} 
+\index{SimulationManager@{SimulationManager}!helpCustomers@{helpCustomers}}
+\index{helpCustomers@{helpCustomers}!SimulationManager@{SimulationManager}}
+\doxysubsubsection{\texorpdfstring{helpCustomers()}{helpCustomers()}}
+{\footnotesize\ttfamily void Simulation\+Manager\+::help\+Customers (\begin{DoxyParamCaption}\item[{Customer\+Type}]{cust\+Type }\end{DoxyParamCaption})}
+
+Function\+: \mbox{\hyperlink{class_simulation_manager_a6d8400ce8c97269c22c9382a3f0e643d}{help\+Customers(\+Customer\+Type)}}  this function helps customers of the given type. retrieves the next customer in line from the appropriate line. If there is a representative available to help the customer, pops the customer out of the line and assigns it to the available rep. If the customer is of a type less than first class and the rep that should help the customer is busy, the rep for the next class type is assigned to the customer. For an economy customer, if the economy rep is busy the business rep is checked, and if they are busy, they first class rep is checked. If all reps are currently busy, the customer continues to wait at least until the next time this function is called. 
+\begin{DoxyParams}{Parameters}
+{\em cust\+Type} & the type of customer to help as any of Customer\+Type \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_simulation_manager_afb96f0e6737629ff0f4b422f12499117}\label{class_simulation_manager_afb96f0e6737629ff0f4b422f12499117}} 
+\index{SimulationManager@{SimulationManager}!inRange@{inRange}}
+\index{inRange@{inRange}!SimulationManager@{SimulationManager}}
+\doxysubsubsection{\texorpdfstring{inRange()}{inRange()}}
+{\footnotesize\ttfamily int Simulation\+Manager\+::in\+Range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_time_range}{Time\+Range}}}]{tr,  }\item[{int}]{sim\+Time }\end{DoxyParamCaption})}
+
+Function\+: \mbox{\hyperlink{class_simulation_manager_afb96f0e6737629ff0f4b422f12499117}{in\+Range(\+Time\+Range, int)}}  this function determines if, for a given time range and amount of time, whether the given time is within the range. 
+\begin{DoxyParams}{Parameters}
+{\em tr} & the time range as a \mbox{\hyperlink{struct_time_range}{Time\+Range}} structure \\
+\hline
+{\em sim\+Time} & the amount of time that has passed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+whether the time is within the range 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_simulation_manager_a1d6934595cc3a115f8b602c020277d0e}\label{class_simulation_manager_a1d6934595cc3a115f8b602c020277d0e}} 
+\index{SimulationManager@{SimulationManager}!printLine@{printLine}}
+\index{printLine@{printLine}!SimulationManager@{SimulationManager}}
+\doxysubsubsection{\texorpdfstring{printLine()}{printLine()}}
+{\footnotesize\ttfamily void Simulation\+Manager\+::print\+Line (\begin{DoxyParamCaption}\item[{Customer\+Type}]{cust\+Type }\end{DoxyParamCaption})}
+
+Function\+: \mbox{\hyperlink{class_simulation_manager_a1d6934595cc3a115f8b602c020277d0e}{print\+Line(\+Customer\+Type)}}  this function prints information about the line that holds the given customer type. Prints how many customers of this type are currently in line and, if the customer service rep for this type is busy, what type of customer they are helping at the moment. Also prints whether the customer rep is not helping anyone. If this function is alled at the end of sim time, it also prints the average amount of time customers waited in the given line type, the longest amount of time a customer of this type waited, and the total number of customers of this type that were helped. 
+\begin{DoxyParams}{Parameters}
+{\em cust\+Type} & the type of customer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_simulation_manager_acec1cda126401b604e30cd050bae6d21}\label{class_simulation_manager_acec1cda126401b604e30cd050bae6d21}} 
+\index{SimulationManager@{SimulationManager}!printLines@{printLines}}
+\index{printLines@{printLines}!SimulationManager@{SimulationManager}}
+\doxysubsubsection{\texorpdfstring{printLines()}{printLines()}}
+{\footnotesize\ttfamily void Simulation\+Manager\+::print\+Lines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function\+: \mbox{\hyperlink{class_simulation_manager_acec1cda126401b604e30cd050bae6d21}{print\+Lines()}}  this function prints information about the three lines. Simply calls the print\+Line function for each of the different customer types. Prints the information to a file in the execution directory called Output.\+out. \mbox{\Hypertarget{class_simulation_manager_a687803bfcadb7172273bee083b423ac9}\label{class_simulation_manager_a687803bfcadb7172273bee083b423ac9}} 
+\index{SimulationManager@{SimulationManager}!timeTick@{timeTick}}
+\index{timeTick@{timeTick}!SimulationManager@{SimulationManager}}
+\doxysubsubsection{\texorpdfstring{timeTick()}{timeTick()}}
+{\footnotesize\ttfamily bool Simulation\+Manager\+::time\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Functinon\+: \mbox{\hyperlink{class_simulation_manager_a687803bfcadb7172273bee083b423ac9}{time\+Tick()}}  This function increments the simulation time by one. For each time increment, customers may be generated depending on the generation rates and they may be enqueued, customers may be assigned to representatives if they are not all busy, customers that are currently being helped may be finished depending on the amount of time they\textquotesingle{}ve been assigned and how long it takes the reps to help a customer, customers may be removed from the queue, or the simulation may finish. Calls the functions that handle all these things, starting with the first class customer type and ending with the economy customer type.. \begin{DoxyReturn}{Returns}
+whether time remains in the simulation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_simulation_manager_aaa7c7d399035c7adf3163363270523d6}\label{class_simulation_manager_aaa7c7d399035c7adf3163363270523d6}} 
+\index{SimulationManager@{SimulationManager}!toString@{toString}}
+\index{toString@{toString}!SimulationManager@{SimulationManager}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily string Simulation\+Manager\+::to\+String (\begin{DoxyParamCaption}\item[{Customer\+Type}]{cust\+Type }\end{DoxyParamCaption})}
+
+Function\+: \mbox{\hyperlink{class_simulation_manager_aaa7c7d399035c7adf3163363270523d6}{to\+String(\+Customer\+Type)}}  for the given customer type enumeration value, this function returns a string representation of that value. So, given Customer\+Type.\+F\+I\+R\+S\+\_\+\+C\+L\+A\+SS, returns \char`\"{}\+First Class\char`\"{} \begin{DoxyReturn}{Returns}
+the customer type as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_simulation_manager_a5ff3bcee43f2da414a6fa9df17b7572f}\label{class_simulation_manager_a5ff3bcee43f2da414a6fa9df17b7572f}} 
+\index{SimulationManager@{SimulationManager}!updateHelpStatus@{updateHelpStatus}}
+\index{updateHelpStatus@{updateHelpStatus}!SimulationManager@{SimulationManager}}
+\doxysubsubsection{\texorpdfstring{updateHelpStatus()}{updateHelpStatus()}}
+{\footnotesize\ttfamily void Simulation\+Manager\+::update\+Help\+Status (\begin{DoxyParamCaption}\item[{Customer\+Type}]{cust\+Type }\end{DoxyParamCaption})}
+
+Function\+: \mbox{\hyperlink{class_simulation_manager_a5ff3bcee43f2da414a6fa9df17b7572f}{update\+Help\+Status(\+Customer\+Type)}}  For the given customer type, this function retrieves the customer service rep and, if they are busy helping a customer, determines how long they have been helping the customer. If it is within the range of time it should take to help, this function essentially flips a coin to determine whether they will finish this customer at the current time tick. If it is determined its time to finish via coin flip or because the max time it should take to help has been reached, the rep finishes the customer they currently are helping, which sets the amount of time it took for the customer to be helped. The customer is added to the list of customers that have been helped. 
+\begin{DoxyParams}{Parameters}
+{\em the} & customer type as any of Customer\+Type \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Simulation\+Manager.\+h\item 
+Simulation\+Manager.\+cpp\end{DoxyCompactItemize}

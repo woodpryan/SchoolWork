@@ -1,0 +1,126 @@
+\hypertarget{class_customer_service_rep}{}\doxysection{Customer\+Service\+Rep Class Reference}
+\label{class_customer_service_rep}\index{CustomerServiceRep@{CustomerServiceRep}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_customer_service_rep_ac86a6f3ef279819197ae19389c444f27}{Customer\+Service\+Rep}} (int sim\+Time, \mbox{\hyperlink{class_customer}{Customer}} cust)
+\item 
+\mbox{\hyperlink{class_customer_service_rep_a2d6cd4f39d6bc428e7090e4a35f3338c}{Customer\+Service\+Rep}} ()
+\item 
+\mbox{\hyperlink{class_customer_service_rep_ad1b7d1f5c44d5073c500d7fa2fd16876}{Customer\+Service\+Rep}} (const \mbox{\hyperlink{class_customer_service_rep}{Customer\+Service\+Rep}} \&other\+Rep)
+\item 
+\mbox{\hyperlink{class_customer_service_rep_ac88a86d81594b949536c4daddb15d31b}{$\sim$\+Customer\+Service\+Rep}} ()
+\item 
+bool \mbox{\hyperlink{class_customer_service_rep_ad05ca3dacc5a08c6edcb0884af4cf11e}{is\+Busy}} () const
+\item 
+int \mbox{\hyperlink{class_customer_service_rep_ab2c02bd7abaaf3768286a24f864389dd}{get\+Time\+Spent\+On\+Customer}} (int sim\+Time) const
+\item 
+void \mbox{\hyperlink{class_customer_service_rep_a3c5a0f037f9a1a3d1ffea5a29ebe3ba4}{start\+Helping}} (int sim\+Time, \mbox{\hyperlink{class_customer}{Customer}} cust)
+\item 
+void \mbox{\hyperlink{class_customer_service_rep_aa786a61ac4e8b6920ff0ab0b9c82e9f4}{finish\+Customer}} (int sim\+Time)
+\item 
+\mbox{\hyperlink{class_customer}{Customer}} \mbox{\hyperlink{class_customer_service_rep_a09665d1e25d7853964295e91c35a7743}{get\+Customer}} () const
+\item 
+int \mbox{\hyperlink{class_customer_service_rep_a4359ba4a6dba367709ca27a7077705a9}{get\+Help\+Start}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_customer_service_rep_ac86a6f3ef279819197ae19389c444f27}\label{class_customer_service_rep_ac86a6f3ef279819197ae19389c444f27}} 
+\index{CustomerServiceRep@{CustomerServiceRep}!CustomerServiceRep@{CustomerServiceRep}}
+\index{CustomerServiceRep@{CustomerServiceRep}!CustomerServiceRep@{CustomerServiceRep}}
+\doxysubsubsection{\texorpdfstring{CustomerServiceRep()}{CustomerServiceRep()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Customer\+Service\+Rep\+::\+Customer\+Service\+Rep (\begin{DoxyParamCaption}\item[{int}]{sim\+Time,  }\item[{\mbox{\hyperlink{class_customer}{Customer}}}]{cust }\end{DoxyParamCaption})}
+
+whether the rep is helping a customer currently \mbox{\Hypertarget{class_customer_service_rep_a2d6cd4f39d6bc428e7090e4a35f3338c}\label{class_customer_service_rep_a2d6cd4f39d6bc428e7090e4a35f3338c}} 
+\index{CustomerServiceRep@{CustomerServiceRep}!CustomerServiceRep@{CustomerServiceRep}}
+\index{CustomerServiceRep@{CustomerServiceRep}!CustomerServiceRep@{CustomerServiceRep}}
+\doxysubsubsection{\texorpdfstring{CustomerServiceRep()}{CustomerServiceRep()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Customer\+Service\+Rep\+::\+Customer\+Service\+Rep (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function\+: \mbox{\hyperlink{class_customer_service_rep_a2d6cd4f39d6bc428e7090e4a35f3338c}{Customer\+Service\+Rep()}}  default constructor. The rep is not helping anyone after this constructor is called. Initializes member variables to defaults \mbox{\Hypertarget{class_customer_service_rep_ad1b7d1f5c44d5073c500d7fa2fd16876}\label{class_customer_service_rep_ad1b7d1f5c44d5073c500d7fa2fd16876}} 
+\index{CustomerServiceRep@{CustomerServiceRep}!CustomerServiceRep@{CustomerServiceRep}}
+\index{CustomerServiceRep@{CustomerServiceRep}!CustomerServiceRep@{CustomerServiceRep}}
+\doxysubsubsection{\texorpdfstring{CustomerServiceRep()}{CustomerServiceRep()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Customer\+Service\+Rep\+::\+Customer\+Service\+Rep (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_customer_service_rep}{Customer\+Service\+Rep}} \&}]{other\+Rep }\end{DoxyParamCaption})}
+
+Function\+: \mbox{\hyperlink{class_customer_service_rep_ad1b7d1f5c44d5073c500d7fa2fd16876}{Customer\+Service\+Rep(const Customer\+Service\+Rep \&)}}  Copy constructor. Sets the rep to have the same member variables as the given rep \mbox{\Hypertarget{class_customer_service_rep_ac88a86d81594b949536c4daddb15d31b}\label{class_customer_service_rep_ac88a86d81594b949536c4daddb15d31b}} 
+\index{CustomerServiceRep@{CustomerServiceRep}!````~CustomerServiceRep@{$\sim$CustomerServiceRep}}
+\index{````~CustomerServiceRep@{$\sim$CustomerServiceRep}!CustomerServiceRep@{CustomerServiceRep}}
+\doxysubsubsection{\texorpdfstring{$\sim$CustomerServiceRep()}{~CustomerServiceRep()}}
+{\footnotesize\ttfamily Customer\+Service\+Rep\+::$\sim$\+Customer\+Service\+Rep (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function\+: \mbox{\hyperlink{class_customer_service_rep_ac88a86d81594b949536c4daddb15d31b}{$\sim$\+Customer\+Service\+Rep()}};  destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_customer_service_rep_aa786a61ac4e8b6920ff0ab0b9c82e9f4}\label{class_customer_service_rep_aa786a61ac4e8b6920ff0ab0b9c82e9f4}} 
+\index{CustomerServiceRep@{CustomerServiceRep}!finishCustomer@{finishCustomer}}
+\index{finishCustomer@{finishCustomer}!CustomerServiceRep@{CustomerServiceRep}}
+\doxysubsubsection{\texorpdfstring{finishCustomer()}{finishCustomer()}}
+{\footnotesize\ttfamily void Customer\+Service\+Rep\+::finish\+Customer (\begin{DoxyParamCaption}\item[{int}]{sim\+Time }\end{DoxyParamCaption})}
+
+Function\+: \mbox{\hyperlink{class_customer_service_rep_aa786a61ac4e8b6920ff0ab0b9c82e9f4}{finish\+Customer(int)}}  this function sets the rep to be not helping a customer anymore, and the customer it is currently helping is passed the given simulation time as the time at which they were helped. 
+\begin{DoxyParams}{Parameters}
+{\em sim\+Time} & the current simulation time \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_customer_service_rep_a09665d1e25d7853964295e91c35a7743}\label{class_customer_service_rep_a09665d1e25d7853964295e91c35a7743}} 
+\index{CustomerServiceRep@{CustomerServiceRep}!getCustomer@{getCustomer}}
+\index{getCustomer@{getCustomer}!CustomerServiceRep@{CustomerServiceRep}}
+\doxysubsubsection{\texorpdfstring{getCustomer()}{getCustomer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_customer}{Customer}} Customer\+Service\+Rep\+::get\+Customer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Function\+: \mbox{\hyperlink{class_customer_service_rep_a09665d1e25d7853964295e91c35a7743}{get\+Customer() const}}  this function returns the customer the rep is currently helping \begin{DoxyReturn}{Returns}
+the customer the rep is helping 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_customer_service_rep_a4359ba4a6dba367709ca27a7077705a9}\label{class_customer_service_rep_a4359ba4a6dba367709ca27a7077705a9}} 
+\index{CustomerServiceRep@{CustomerServiceRep}!getHelpStart@{getHelpStart}}
+\index{getHelpStart@{getHelpStart}!CustomerServiceRep@{CustomerServiceRep}}
+\doxysubsubsection{\texorpdfstring{getHelpStart()}{getHelpStart()}}
+{\footnotesize\ttfamily int Customer\+Service\+Rep\+::get\+Help\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Function\+: \mbox{\hyperlink{class_customer_service_rep_a4359ba4a6dba367709ca27a7077705a9}{get\+Help\+Start()}}  this function returns the time at which the rep started helping its current customer \begin{DoxyReturn}{Returns}
+the time the rep started on the current customer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_customer_service_rep_ab2c02bd7abaaf3768286a24f864389dd}\label{class_customer_service_rep_ab2c02bd7abaaf3768286a24f864389dd}} 
+\index{CustomerServiceRep@{CustomerServiceRep}!getTimeSpentOnCustomer@{getTimeSpentOnCustomer}}
+\index{getTimeSpentOnCustomer@{getTimeSpentOnCustomer}!CustomerServiceRep@{CustomerServiceRep}}
+\doxysubsubsection{\texorpdfstring{getTimeSpentOnCustomer()}{getTimeSpentOnCustomer()}}
+{\footnotesize\ttfamily int Customer\+Service\+Rep\+::get\+Time\+Spent\+On\+Customer (\begin{DoxyParamCaption}\item[{int}]{sim\+Time }\end{DoxyParamCaption}) const}
+
+Function\+: \mbox{\hyperlink{class_customer_service_rep_ab2c02bd7abaaf3768286a24f864389dd}{get\+Time\+Spent\+On\+Customer(int) const}}  this function determines how much simulation time has elapsed since the rep began helping its current customer until the given simulation time 
+\begin{DoxyParams}{Parameters}
+{\em sim\+Time} & the current simulation time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the amount of time the rep has been helping its current customer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_customer_service_rep_ad05ca3dacc5a08c6edcb0884af4cf11e}\label{class_customer_service_rep_ad05ca3dacc5a08c6edcb0884af4cf11e}} 
+\index{CustomerServiceRep@{CustomerServiceRep}!isBusy@{isBusy}}
+\index{isBusy@{isBusy}!CustomerServiceRep@{CustomerServiceRep}}
+\doxysubsubsection{\texorpdfstring{isBusy()}{isBusy()}}
+{\footnotesize\ttfamily bool Customer\+Service\+Rep\+::is\+Busy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Function\+: \mbox{\hyperlink{class_customer_service_rep_ad05ca3dacc5a08c6edcb0884af4cf11e}{is\+Busy() const}}  this function returns whether the rep is currently helping a customer \begin{DoxyReturn}{Returns}
+whether the rep is currently helping a customer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_customer_service_rep_a3c5a0f037f9a1a3d1ffea5a29ebe3ba4}\label{class_customer_service_rep_a3c5a0f037f9a1a3d1ffea5a29ebe3ba4}} 
+\index{CustomerServiceRep@{CustomerServiceRep}!startHelping@{startHelping}}
+\index{startHelping@{startHelping}!CustomerServiceRep@{CustomerServiceRep}}
+\doxysubsubsection{\texorpdfstring{startHelping()}{startHelping()}}
+{\footnotesize\ttfamily void Customer\+Service\+Rep\+::start\+Helping (\begin{DoxyParamCaption}\item[{int}]{sim\+Time,  }\item[{\mbox{\hyperlink{class_customer}{Customer}}}]{cust }\end{DoxyParamCaption})}
+
+Function\+: \mbox{\hyperlink{class_customer_service_rep_a3c5a0f037f9a1a3d1ffea5a29ebe3ba4}{start\+Helping(int, Customer)}}  this function assigns the given customer to the rep at the given simulation time. Sets whether the rep is busy to true 
+\begin{DoxyParams}{Parameters}
+{\em sim\+Time} & the current simulation time \\
+\hline
+{\em cust} & the customer to help \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Customer\+Service\+Rep.\+h\item 
+Customer\+Service\+Rep.\+cpp\end{DoxyCompactItemize}

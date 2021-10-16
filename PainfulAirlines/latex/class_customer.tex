@@ -1,0 +1,122 @@
+\hypertarget{class_customer}{}\doxysection{Customer Class Reference}
+\label{class_customer}\index{Customer@{Customer}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_customer_abcc8fae9701e5ba9d7d6fe44498b34e3}{Customer}} ()
+\item 
+\mbox{\hyperlink{class_customer_afd02b93fc9405e6f2c15bfe57accdbe6}{Customer}} (int start\+Wait, Customer\+Type cust\+Type)
+\item 
+\mbox{\hyperlink{class_customer_a609bb254af86d494b1561bd5eefb6b0e}{Customer}} (const \mbox{\hyperlink{class_customer}{Customer}} \&other\+Cust)
+\item 
+\mbox{\hyperlink{class_customer_ab93fb14683b0393b9c900109f77c2629}{$\sim$\+Customer}} ()
+\item 
+int \mbox{\hyperlink{class_customer_ad1e6465442afae07e83c72d8eaa6173e}{get\+Time\+Waited}} () const
+\item 
+int \mbox{\hyperlink{class_customer_a653782f129a0ce2c8326801ccdbc6534}{get\+Time\+Created}} () const
+\item 
+bool \mbox{\hyperlink{class_customer_ae350cb0e2a6c36cc0469a75419feb66b}{is\+Cared\+For}} () const
+\item 
+bool \mbox{\hyperlink{class_customer_a38ff7e3c2caa7724e9bba7079226e349}{is\+Being\+Helped}} () const
+\item 
+void \mbox{\hyperlink{class_customer_a436d61856f38f528d82246edf9cad72f}{start\+Helping}} ()
+\item 
+\mbox{\Hypertarget{class_customer_a3577b11c02bacc0a8e8888a72600fd31}\label{class_customer_a3577b11c02bacc0a8e8888a72600fd31}} 
+void {\bfseries process\+Customer} (int sim\+Time)
+\item 
+\mbox{\Hypertarget{class_customer_a0117bd05a1912bba1b121eb5ae3ea80f}\label{class_customer_a0117bd05a1912bba1b121eb5ae3ea80f}} 
+Customer\+Type {\bfseries get\+Customer\+Type} () const
+\item 
+\mbox{\Hypertarget{class_customer_af06102b9eb18e6571e14f178e9d89f9e}\label{class_customer_af06102b9eb18e6571e14f178e9d89f9e}} 
+void {\bfseries operator=} (const \mbox{\hyperlink{class_customer}{Customer}} \&other\+Cust)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_customer_abcc8fae9701e5ba9d7d6fe44498b34e3}\label{class_customer_abcc8fae9701e5ba9d7d6fe44498b34e3}} 
+\index{Customer@{Customer}!Customer@{Customer}}
+\index{Customer@{Customer}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{Customer()}{Customer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Customer\+::\+Customer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function\+: \mbox{\hyperlink{class_customer_abcc8fae9701e5ba9d7d6fe44498b34e3}{Customer()}}  This function initializes member variables to their defaults. time created is set to 0. \mbox{\Hypertarget{class_customer_afd02b93fc9405e6f2c15bfe57accdbe6}\label{class_customer_afd02b93fc9405e6f2c15bfe57accdbe6}} 
+\index{Customer@{Customer}!Customer@{Customer}}
+\index{Customer@{Customer}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{Customer()}{Customer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Customer\+::\+Customer (\begin{DoxyParamCaption}\item[{int}]{start\+Wait,  }\item[{Customer\+Type}]{cust\+Type }\end{DoxyParamCaption})}
+
+Function\+: \mbox{\hyperlink{class_customer_afd02b93fc9405e6f2c15bfe57accdbe6}{Customer(int, Customer\+Type)}}  this parameterized constructor initializes the class to have the given start time and customer type. Other variables like whether the customer is being cared for or if they\textquotesingle{}ve been helped are initialized to false 
+\begin{DoxyParams}{Parameters}
+{\em start\+Wait} & The simulation time at which the customer was created \\
+\hline
+{\em cust\+Type} & the customer type as any of Customer\+Type \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_customer_a609bb254af86d494b1561bd5eefb6b0e}\label{class_customer_a609bb254af86d494b1561bd5eefb6b0e}} 
+\index{Customer@{Customer}!Customer@{Customer}}
+\index{Customer@{Customer}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{Customer()}{Customer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Customer\+::\+Customer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_customer}{Customer}} \&}]{other\+Cust }\end{DoxyParamCaption})}
+
+Function\+: \mbox{\hyperlink{class_customer_a609bb254af86d494b1561bd5eefb6b0e}{Customer(const Customer\&)}}  this is the copy constructor. Does a deep copy of the given customer\textquotesingle{}s member variables 
+\begin{DoxyParams}{Parameters}
+{\em other\+Cust} & the customer to copy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_customer_ab93fb14683b0393b9c900109f77c2629}\label{class_customer_ab93fb14683b0393b9c900109f77c2629}} 
+\index{Customer@{Customer}!````~Customer@{$\sim$Customer}}
+\index{````~Customer@{$\sim$Customer}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{$\sim$Customer()}{~Customer()}}
+{\footnotesize\ttfamily Customer\+::$\sim$\+Customer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function\+: \mbox{\hyperlink{class_customer_ab93fb14683b0393b9c900109f77c2629}{$\sim$\+Customer()}}  this is the destructor for the customer 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_customer_a653782f129a0ce2c8326801ccdbc6534}\label{class_customer_a653782f129a0ce2c8326801ccdbc6534}} 
+\index{Customer@{Customer}!getTimeCreated@{getTimeCreated}}
+\index{getTimeCreated@{getTimeCreated}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{getTimeCreated()}{getTimeCreated()}}
+{\footnotesize\ttfamily int Customer\+::get\+Time\+Created (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Function\+: \mbox{\hyperlink{class_customer_a653782f129a0ce2c8326801ccdbc6534}{get\+Time\+Created() const}}  This function returns the simulation time at which this customer was created \begin{DoxyReturn}{Returns}
+the creation time for the customer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_customer_ad1e6465442afae07e83c72d8eaa6173e}\label{class_customer_ad1e6465442afae07e83c72d8eaa6173e}} 
+\index{Customer@{Customer}!getTimeWaited@{getTimeWaited}}
+\index{getTimeWaited@{getTimeWaited}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{getTimeWaited()}{getTimeWaited()}}
+{\footnotesize\ttfamily int Customer\+::get\+Time\+Waited (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Function\+: \mbox{\hyperlink{class_customer_ad1e6465442afae07e83c72d8eaa6173e}{get\+Time\+Waited() const}}  this function retrieves the amount of time the customer waited after having been created before they were helped and finished. If they have not been finished, returns zero. \begin{DoxyReturn}{Returns}
+time waited 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_customer_a38ff7e3c2caa7724e9bba7079226e349}\label{class_customer_a38ff7e3c2caa7724e9bba7079226e349}} 
+\index{Customer@{Customer}!isBeingHelped@{isBeingHelped}}
+\index{isBeingHelped@{isBeingHelped}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{isBeingHelped()}{isBeingHelped()}}
+{\footnotesize\ttfamily bool Customer\+::is\+Being\+Helped (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Function\+: \mbox{\hyperlink{class_customer_a38ff7e3c2caa7724e9bba7079226e349}{is\+Being\+Helped() const}}  Time passes between the time a customer is assigned to a customer service rep and the time that the rep finishes helping the customer. This function returns whether the customer is being helped, but is has not been finished \begin{DoxyReturn}{Returns}
+whether the customer is being assisted now 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_customer_ae350cb0e2a6c36cc0469a75419feb66b}\label{class_customer_ae350cb0e2a6c36cc0469a75419feb66b}} 
+\index{Customer@{Customer}!isCaredFor@{isCaredFor}}
+\index{isCaredFor@{isCaredFor}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{isCaredFor()}{isCaredFor()}}
+{\footnotesize\ttfamily bool Customer\+::is\+Cared\+For (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Function\+: \mbox{\hyperlink{class_customer_ae350cb0e2a6c36cc0469a75419feb66b}{is\+Cared\+For() const}}  returns whether a customer service agent has finished helping this customer \begin{DoxyReturn}{Returns}
+whether the customer has been helped 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_customer_a436d61856f38f528d82246edf9cad72f}\label{class_customer_a436d61856f38f528d82246edf9cad72f}} 
+\index{Customer@{Customer}!startHelping@{startHelping}}
+\index{startHelping@{startHelping}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{startHelping()}{startHelping()}}
+{\footnotesize\ttfamily void Customer\+::start\+Helping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function\+: \mbox{\hyperlink{class_customer_a436d61856f38f528d82246edf9cad72f}{start\+Helping()}}  this function sets the status of the customer as being helped. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Customer.\+h\item 
+Customer.\+cpp\end{DoxyCompactItemize}

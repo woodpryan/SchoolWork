@@ -1,0 +1,318 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.20" xml:lang="en-US">
+  <compounddef id="class_customer" kind="class" language="C++" prot="public">
+    <compoundname>Customer</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_customer_1a84afa2daa17987c4f5b30dc93cbefb88" prot="private" static="no" mutable="no">
+        <type>CustomerType</type>
+        <definition>CustomerType Customer::m_customerType</definition>
+        <argsstring></argsstring>
+        <name>m_customerType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Customer.h" line="28" column="18" bodyfile="Customer.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_customer_1aae2033c1f1321658284bc2457ca1f6fb" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Customer::m_isBeingHelped</definition>
+        <argsstring></argsstring>
+        <name>m_isBeingHelped</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Customer.h" line="29" column="18" bodyfile="Customer.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_customer_1a4e0b2bd951365595c9ea5c05cb5ad422" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Customer::m_isCaredFor</definition>
+        <argsstring></argsstring>
+        <name>m_isCaredFor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Customer.h" line="30" column="18" bodyfile="Customer.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_customer_1a4a0c72170242adfc521e4b5e4fe88082" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Customer::m_timeWaited</definition>
+        <argsstring></argsstring>
+        <name>m_timeWaited</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Customer.h" line="31" column="18" bodyfile="Customer.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_customer_1a0f423844fad764e70c87371d671822f8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Customer::m_timeCreated</definition>
+        <argsstring></argsstring>
+        <name>m_timeCreated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Customer.h" line="32" column="18" bodyfile="Customer.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_customer_1abcc8fae9701e5ba9d7d6fe44498b34e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Customer::Customer</definition>
+        <argsstring>()</argsstring>
+        <name>Customer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_customer_1abcc8fae9701e5ba9d7d6fe44498b34e3" kindref="member">Customer()</ref>  This function initializes member variables to their defaults. time created is set to 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Customer.h" line="40" column="5" bodyfile="Customer.cpp" bodystart="5" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_customer_1afd02b93fc9405e6f2c15bfe57accdbe6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Customer::Customer</definition>
+        <argsstring>(int startWait, CustomerType custType)</argsstring>
+        <name>Customer</name>
+        <param>
+          <type>int</type>
+          <declname>startWait</declname>
+        </param>
+        <param>
+          <type>CustomerType</type>
+          <declname>custType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_customer_1afd02b93fc9405e6f2c15bfe57accdbe6" kindref="member">Customer(int, CustomerType)</ref>  this parameterized constructor initializes the class to have the given start time and customer type. Other variables like whether the customer is being cared for or if they&apos;ve been helped are initialized to false <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>startWait</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The simulation time at which the customer was created </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>custType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the customer type as any of CustomerType </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Customer.h" line="50" column="5" bodyfile="Customer.cpp" bodystart="14" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_customer_1a609bb254af86d494b1561bd5eefb6b0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Customer::Customer</definition>
+        <argsstring>(const Customer &amp;otherCust)</argsstring>
+        <name>Customer</name>
+        <param>
+          <type>const <ref refid="class_customer" kindref="compound">Customer</ref> &amp;</type>
+          <declname>otherCust</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_customer_1a609bb254af86d494b1561bd5eefb6b0e" kindref="member">Customer(const Customer&amp;)</ref>  this is the copy constructor. Does a deep copy of the given customer&apos;s member variables <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>otherCust</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the customer to copy </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Customer.h" line="57" column="5" bodyfile="Customer.cpp" bodystart="21" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_customer_1ab93fb14683b0393b9c900109f77c2629" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Customer::~Customer</definition>
+        <argsstring>()</argsstring>
+        <name>~Customer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_customer_1ab93fb14683b0393b9c900109f77c2629" kindref="member">~Customer()</ref>  this is the destructor for the customer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Customer.h" line="62" column="5" bodyfile="Customer.cpp" bodystart="28" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_customer_1ad1e6465442afae07e83c72d8eaa6173e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Customer::getTimeWaited</definition>
+        <argsstring>() const</argsstring>
+        <name>getTimeWaited</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_customer_1ad1e6465442afae07e83c72d8eaa6173e" kindref="member">getTimeWaited() const</ref>  this function retrieves the amount of time the customer waited after having been created before they were helped and finished. If they have not been finished, returns zero. <simplesect kind="return"><para>time waited </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Customer.h" line="71" column="9" bodyfile="Customer.cpp" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_customer_1a653782f129a0ce2c8326801ccdbc6534" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Customer::getTimeCreated</definition>
+        <argsstring>() const</argsstring>
+        <name>getTimeCreated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_customer_1a653782f129a0ce2c8326801ccdbc6534" kindref="member">getTimeCreated() const</ref>  This function returns the simulation time at which this customer was created <simplesect kind="return"><para>the creation time for the customer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Customer.h" line="78" column="9" bodyfile="Customer.cpp" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_customer_1ae350cb0e2a6c36cc0469a75419feb66b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Customer::isCaredFor</definition>
+        <argsstring>() const</argsstring>
+        <name>isCaredFor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_customer_1ae350cb0e2a6c36cc0469a75419feb66b" kindref="member">isCaredFor() const</ref>  returns whether a customer service agent has finished helping this customer <simplesect kind="return"><para>whether the customer has been helped </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Customer.h" line="85" column="10" bodyfile="Customer.cpp" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_customer_1a38ff7e3c2caa7724e9bba7079226e349" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Customer::isBeingHelped</definition>
+        <argsstring>() const</argsstring>
+        <name>isBeingHelped</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_customer_1a38ff7e3c2caa7724e9bba7079226e349" kindref="member">isBeingHelped() const</ref>  Time passes between the time a customer is assigned to a customer service rep and the time that the rep finishes helping the customer. This function returns whether the customer is being helped, but is has not been finished <simplesect kind="return"><para>whether the customer is being assisted now </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Customer.h" line="94" column="10" bodyfile="Customer.cpp" bodystart="42" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_customer_1a436d61856f38f528d82246edf9cad72f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Customer::startHelping</definition>
+        <argsstring>()</argsstring>
+        <name>startHelping</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function: <ref refid="class_customer_1a436d61856f38f528d82246edf9cad72f" kindref="member">startHelping()</ref>  this function sets the status of the customer as being helped. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Customer.h" line="99" column="10" bodyfile="Customer.cpp" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_customer_1a3577b11c02bacc0a8e8888a72600fd31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Customer::processCustomer</definition>
+        <argsstring>(int simTime)</argsstring>
+        <name>processCustomer</name>
+        <param>
+          <type>int</type>
+          <declname>simTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Customer.h" line="107" column="10" bodyfile="Customer.cpp" bodystart="52" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_customer_1a0117bd05a1912bba1b121eb5ae3ea80f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>CustomerType</type>
+        <definition>CustomerType Customer::getCustomerType</definition>
+        <argsstring>() const</argsstring>
+        <name>getCustomerType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Customer.h" line="113" column="18" bodyfile="Customer.cpp" bodystart="59" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_customer_1af06102b9eb18e6571e14f178e9d89f9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Customer::operator=</definition>
+        <argsstring>(const Customer &amp;otherCust)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="class_customer" kindref="compound">Customer</ref> &amp;</type>
+          <declname>otherCust</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Customer.h" line="120" column="10" bodyfile="Customer.cpp" bodystart="69" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Customer.h" line="25" column="1" bodyfile="Customer.h" bodystart="26" bodyend="122"/>
+    <listofallmembers>
+      <member refid="class_customer_1abcc8fae9701e5ba9d7d6fe44498b34e3" prot="public" virt="non-virtual"><scope>Customer</scope><name>Customer</name></member>
+      <member refid="class_customer_1afd02b93fc9405e6f2c15bfe57accdbe6" prot="public" virt="non-virtual"><scope>Customer</scope><name>Customer</name></member>
+      <member refid="class_customer_1a609bb254af86d494b1561bd5eefb6b0e" prot="public" virt="non-virtual"><scope>Customer</scope><name>Customer</name></member>
+      <member refid="class_customer_1a0117bd05a1912bba1b121eb5ae3ea80f" prot="public" virt="non-virtual"><scope>Customer</scope><name>getCustomerType</name></member>
+      <member refid="class_customer_1a653782f129a0ce2c8326801ccdbc6534" prot="public" virt="non-virtual"><scope>Customer</scope><name>getTimeCreated</name></member>
+      <member refid="class_customer_1ad1e6465442afae07e83c72d8eaa6173e" prot="public" virt="non-virtual"><scope>Customer</scope><name>getTimeWaited</name></member>
+      <member refid="class_customer_1a38ff7e3c2caa7724e9bba7079226e349" prot="public" virt="non-virtual"><scope>Customer</scope><name>isBeingHelped</name></member>
+      <member refid="class_customer_1ae350cb0e2a6c36cc0469a75419feb66b" prot="public" virt="non-virtual"><scope>Customer</scope><name>isCaredFor</name></member>
+      <member refid="class_customer_1a84afa2daa17987c4f5b30dc93cbefb88" prot="private" virt="non-virtual"><scope>Customer</scope><name>m_customerType</name></member>
+      <member refid="class_customer_1aae2033c1f1321658284bc2457ca1f6fb" prot="private" virt="non-virtual"><scope>Customer</scope><name>m_isBeingHelped</name></member>
+      <member refid="class_customer_1a4e0b2bd951365595c9ea5c05cb5ad422" prot="private" virt="non-virtual"><scope>Customer</scope><name>m_isCaredFor</name></member>
+      <member refid="class_customer_1a0f423844fad764e70c87371d671822f8" prot="private" virt="non-virtual"><scope>Customer</scope><name>m_timeCreated</name></member>
+      <member refid="class_customer_1a4a0c72170242adfc521e4b5e4fe88082" prot="private" virt="non-virtual"><scope>Customer</scope><name>m_timeWaited</name></member>
+      <member refid="class_customer_1af06102b9eb18e6571e14f178e9d89f9e" prot="public" virt="non-virtual"><scope>Customer</scope><name>operator=</name></member>
+      <member refid="class_customer_1a3577b11c02bacc0a8e8888a72600fd31" prot="public" virt="non-virtual"><scope>Customer</scope><name>processCustomer</name></member>
+      <member refid="class_customer_1a436d61856f38f528d82246edf9cad72f" prot="public" virt="non-virtual"><scope>Customer</scope><name>startHelping</name></member>
+      <member refid="class_customer_1ab93fb14683b0393b9c900109f77c2629" prot="public" virt="non-virtual"><scope>Customer</scope><name>~Customer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,144 @@
+/*Private member variable names defined in Set.h
+static const size_t    MAX = 2 * MIN;
+size_t                 valueCount;
+List<dataType, MAX+1>  data;
+size_t                 numChildren;
+Set                   *children[MAX+2];*/
+
+/*************************PUBLIC FUNCTIONS*********************/
+template<typename dataType, size_t MIN>
+Set<dataType, MIN>::Set()
+{
+    valueCount  = 0;
+    numChildren = 0;
+}
+
+template<typename dataType, size_t MIN>
+Set<dataType, MIN>::Set(const Set& source)
+{
+}
+
+template<typename dataType, size_t MIN>
+Set<dataType, MIN>::~Set()
+{
+    clear();
+}
+
+template<typename dataType, size_t MIN>
+void Set<dataType, MIN>::operator =(const Set& source)
+{
+}
+
+template<typename dataType, size_t MIN>
+void Set<dataType, MIN>::clear()
+{
+}
+
+template<typename dataType, size_t MIN>
+bool Set<dataType, MIN>::insert(const dataType& val)
+{
+}
+
+template<typename dataType, size_t MIN>
+size_t Set<dataType, MIN>::erase(const dataType& val)
+{
+}
+
+template<typename dataType, size_t MIN>
+size_t Set<dataType, MIN>::count(const dataType& val) const
+{
+    int index = 0;
+
+    //there is no data in the node
+    if(data.size() == 0)
+        return 0;
+
+    data.first();
+
+    //set index to an index such that data[index] < val
+    while(data.getElement() > val && data.getPos() < data.size())
+    {
+        data.next();
+    }
+
+    if(data.getElement() > val)
+    {
+        index = 0;
+        data.first();
+    }
+
+    if(!val < data.getElement())//if it's not greater and not less, it is equal
+        return 1;
+    if(0 == numChildren)
+        return 0;
+    if(index < childCount)
+        return children[index]->count(val);
+}
+
+template<typename dataType, size_t MIN>
+bool Set<dataType, MIN>::empty() const
+{
+    return (valueCount == 0);
+}
+
+/***************************PRIVATE FUNCTIONS************************/
+
+template<typename dataType, size_t MIN>
+bool Set<dataType, MIN>::isLeaf()
+{
+}
+
+template<typename dataType, size_t MIN>
+bool Set<dataType, MIN>::looseInsert(const dataType& val)
+{
+    int index = 0;
+
+    //there is no data in the node
+    if(data.size() == 0)
+        return 0;
+
+    data.first();
+
+    //set index to an index such that data[index] < val
+    while(data.getElement() > val && data.getPos() < data.size())
+    {
+        data.next();
+    }
+
+    if(data.getElement() > val)
+    {
+        index = 0;
+        data.first();
+    }
+
+    if(!val < data.getElement())//if it's not greater and not less, it is equal
+    {
+        //if the data is in the set, return, since it's already here
+        return false;
+    }
+    else if(0 == numChildren)
+    {
+        
+    }
+}
+
+template<typename dataType, size_t MIN>
+bool Set<dataType, MIN>::looseErase(const dataType& target)
+{
+}
+
+template<typename dataType, size_t MIN>
+void Set<dataType, MIN>::removeBiggest(dataType& removedItem)
+{
+}
+
+template<typename dataType, size_t MIN>
+void Set<dataType, MIN>::fixExcess(size_t index)
+{
+}
+
+template<typename dataType, size_t MIN>
+void Set<dataType, MIN>::fixShortage(size_t index)
+{
+}
+

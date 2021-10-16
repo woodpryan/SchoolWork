@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.20" xml:lang="en-US">
+  <compounddef id="struct_time_range" kind="struct" language="C++" prot="public">
+    <compoundname>TimeRange</compoundname>
+    <includes refid="_simulation_manager_8h" local="no">SimulationManager.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_time_range_1a832fc775ec7b887af8e4bc9d2e18d5c0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TimeRange::min</definition>
+        <argsstring></argsstring>
+        <name>min</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Minimum time it takes to help a customer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimulationManager.h" line="37" column="9" bodyfile="SimulationManager.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_time_range_1ad29d17e5849b42d6054634e502387c7b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TimeRange::max</definition>
+        <argsstring></argsstring>
+        <name>max</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum time it takes to help a customer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimulationManager.h" line="38" column="9" bodyfile="SimulationManager.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="struct_time_range" kindref="compound">TimeRange</ref> structure. time range between min and max </para>
+    </detaileddescription>
+    <location file="SimulationManager.h" line="35" column="1" bodyfile="SimulationManager.h" bodystart="36" bodyend="39"/>
+    <listofallmembers>
+      <member refid="struct_time_range_1ad29d17e5849b42d6054634e502387c7b" prot="public" virt="non-virtual"><scope>TimeRange</scope><name>max</name></member>
+      <member refid="struct_time_range_1a832fc775ec7b887af8e4bc9d2e18d5c0" prot="public" virt="non-virtual"><scope>TimeRange</scope><name>min</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

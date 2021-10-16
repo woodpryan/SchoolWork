@@ -1,0 +1,44 @@
+#
+# File:    Makefile
+# Author:  Adam.Lewis@athens.edu
+# Purpose:
+#          Build the examples for Module 02
+# 
+CC=g++
+CFLAGS=-I. -std=c++14
+Libs=
+DEPS= 
+OBJ= 
+
+%.o: %.cpp $(DEPS)
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+all:	valref stl_vector stl_deque stl_tuple stl_map stl_multimap
+
+valref: valref.o
+	$(CC) $(CFLAGS) $(LIBS) -o $@ $^ 
+
+stl_vector: stl_vector.o
+	$(CC) $(CFLAGS) $(LIBS) -o $@ $^ 
+
+stl_deque: stl_deque.o
+	$(CC) $(CFLAGS) $(LIBS) -o $@ $^ 
+
+stl_list: stl_list.o
+	$(CC) $(CFLAGS) $(LIBS) -o $@ $^ 
+
+stl_tuple: stl_tuple.o
+	$(CC) $(CFLAGS) $(LIBS) -o $@ $^ 
+
+stl_map: stl_map.o
+	$(CC) $(CFLAGS) $(LIBS) -o $@ $^ 
+
+stl_multimap: stl_multimap.o
+	$(CC) $(CFLAGS) $(LIBS) -o $@ $^ 
+
+clean:
+	rm *.o
+	rm valref stl_vector stl_deque stl_list
+	rm stl_tuple stl_map
+
+

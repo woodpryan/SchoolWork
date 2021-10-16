@@ -1,0 +1,15 @@
+sum stat1 = 254.8
+length of stat1 = 7
+stat1 value average = 36.4
+
+sum stat2 = 4742
+length of stat2 = 10
+stat2 value average = 474.2
+
+
+Cleared stat2 and added new values
+sum stat2 = 574.3
+length of stat2 = 10
+stat2 value average = 57.43
+stat2 largest = 99.3
+stat2 smallest = -69.3

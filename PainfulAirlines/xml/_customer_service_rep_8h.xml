@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.20" xml:lang="en-US">
+  <compounddef id="_customer_service_rep_8h" kind="file" language="C++">
+    <compoundname>CustomerServiceRep.h</compoundname>
+    <includes local="no">iostream</includes>
+    <includes refid="_customer_8h" local="yes">Customer.h</includes>
+    <includedby refid="_customer_service_rep_8cpp" local="yes">CustomerServiceRep.cpp</includedby>
+    <includedby refid="_main_8cpp" local="yes">Main.cpp</includedby>
+    <includedby refid="_simulation_manager_8cpp" local="yes">SimulationManager.cpp</includedby>
+    <includedby refid="_simulation_manager_8h" local="yes">SimulationManager.h</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>Customer.h</label>
+        <link refid="_customer_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="1">
+        <label>CustomerServiceRep.h</label>
+        <link refid="_customer_service_rep_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>SimulationManager.h</label>
+        <link refid="_simulation_manager_8h_source"/>
+      </node>
+      <node id="1">
+        <label>CustomerServiceRep.h</label>
+        <link refid="_customer_service_rep_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_customer_service_rep" prot="public">CustomerServiceRep</innerclass>
+    <innernamespace refid="namespacestd">std</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/><sp/><sp/>@class<sp/><sp/><sp/><sp/><sp/><sp/>CustomerServiceRep</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/>@author<sp/><sp/><sp/><sp/><sp/>Ryan<sp/>Wood</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/><sp/>@date<sp/><sp/><sp/><sp/><sp/><sp/><sp/>September<sp/>22,<sp/>2020</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/><sp/>@details<sp/><sp/><sp/><sp/>This<sp/>class<sp/>is<sp/>a<sp/>Customer<sp/>Service<sp/>Representative<sp/>for<sp/>Painful<sp/>Airlines.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>The<sp/>CustomerServiceRep<sp/>has<sp/>function<sp/>definitions<sp/>that<sp/>allow<sp/>it<sp/>to</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>start<sp/>helping<sp/>customers<sp/>or<sp/>finish<sp/>helping<sp/>a<sp/>customer<sp/>at<sp/>a<sp/>given<sp/>time.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CUSTOMER_SERVICE_REP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CUSTOMER_SERVICE_REP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Customer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="class_customer_service_rep" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_customer_service_rep" kindref="compound">CustomerServiceRep</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_customer" kindref="compound">Customer</ref><sp/>m_customer;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>m_helpStart;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>m_isHelping;</highlight></codeline>
+<codeline lineno="26"><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/>Function:<sp/><sp/><sp/>CustomerServiceRep(int,<sp/>Customer)</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>@details<sp/><sp/><sp/><sp/>Parameterized<sp/>constructor<sp/>takes<sp/>the<sp/>current<sp/>simulation<sp/>time<sp/>and</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>Customer.<sp/>After<sp/>this<sp/>function<sp/>is<sp/>called,<sp/>the<sp/>rep<sp/>is<sp/>helping<sp/>the</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>given<sp/>customer<sp/>and<sp/>started<sp/>at<sp/>the<sp/>given<sp/>time.</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>@param<sp/><sp/><sp/><sp/><sp/><sp/>simTime<sp/>the<sp/>current<sp/>simulation<sp/>time,<sp/>which<sp/>is<sp/>when<sp/>the<sp/>rep<sp/>starts<sp/>helping</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>@param<sp/><sp/><sp/><sp/><sp/><sp/>cust<sp/>the<sp/>customer<sp/>that<sp/>the<sp/>rep<sp/>is<sp/>helping</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_customer_service_rep" kindref="compound">CustomerServiceRep</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>simTime,<sp/><ref refid="class_customer" kindref="compound">Customer</ref><sp/>cust);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_customer_service_rep" kindref="compound">CustomerServiceRep</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_customer_service_rep" kindref="compound">CustomerServiceRep</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_customer_service_rep" kindref="compound">CustomerServiceRep</ref><sp/>&amp;otherRep);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="class_customer_service_rep" kindref="compound">CustomerServiceRep</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isBusy()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>getTimeSpentOnCustomer(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>simTime)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>startHelping(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>simTime,<sp/><ref refid="class_customer" kindref="compound">Customer</ref><sp/>cust);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>finishCustomer(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>simTime);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_customer" kindref="compound">Customer</ref><sp/>getCustomer()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>getHelpStart()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="CustomerServiceRep.h"/>
+  </compounddef>
+</doxygen>

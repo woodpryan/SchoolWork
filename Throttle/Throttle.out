@@ -1,0 +1,9 @@
+Car is on before shift = 0
+Car is on after shift = 1
+Car flow at first gear = 16.67%
+car flow at 5th gear = 83.33%
+Car flow at 4th gear = 66.67%
+rig flow shifted to 15th gear = 50.00%
+after shifting up more than rig max flow = 100.0%
+after shutting rig off, isOn = 0
+Shuttle flow at 4th gear is 20.00%

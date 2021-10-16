@@ -1,0 +1,33 @@
+The original infix equation was 5 + 7#
+The postfix equation is 57+
+
+The original infix equation was 6 ^ 2 + 1#
+The postfix equation is 62^1+
+
+The original infix equation was 3 * 8 + 6#
+The postfix equation is 38*6+
+
+The original infix equation was 5 ^ 4 - 6 ^ 4#
+The postfix equation is 54^64^-
+
+The original infix equation was 5 -  3 * 7 / 4 - 9#
+The postfix equation is 537*4/-9-
+
+The original infix equation was 8 * ( 9 / 3 - 2 ) / 4 + 5 * 6#
+The postfix equation is 893/2-*4/56*+
+
+The original infix equation was 5 ^ 3 * 4 + ( 2 + ( 9 * 8 / ( 2 * 6 * ( 8 / 4 ) ) ) ^ 2 * 8 - 5 ) / 5 ^ 2 - 4#
+The postfix equation is 53^4*298*26*84/*/2^8*+5-52^/+4-
+
+The original infix equation was 5 - 3 * 8 / 2 ^ 3#
+The postfix equation is 538*23^/-
+
+The original infix equation was 3 ^ 3 ^ 2 *3#
+The postfix equation is 33^2^3*
+
+The original infix equation was 8 * ( 6 / 3 - 2 ) / 4 + 5 * 6 +3#
+The postfix equation is 863/2-*4/56*+3+
+
+The original infix equation was ( ( ( ( ( 9 * 5 ) ) ) ) )#
+The postfix equation is 95*
+
